@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content"
+import { Icon } from 'astro-icon/components';
 import PageLayout from "@layouts/PageLayout.astro"
 import ArrowCard from "@components/ArrowCard"
 import StackCard from "@components/StackCard.astro"
@@ -44,28 +45,28 @@ const stack = [
 <PageLayout title="Home" description={SITE.DESCRIPTION}>
 
   <!-- Light Mode: Particles -->
-  <div class='absolute inset-0 block dark:hidden'>
-    <div id='particles1' class='fixed inset-0'></div>
-    <div id='particles2' class='fixed inset-0'></div>
-    <div id='particles3' class='fixed inset-0'></div>
-  </div>
+  <!--<div class='absolute inset-0 block dark:hidden'>-->
+  <!--  <div id='particles1' class='fixed inset-0'></div>-->
+  <!--  <div id='particles2' class='fixed inset-0'></div>-->
+  <!--  <div id='particles3' class='fixed inset-0'></div>-->
+  <!--</div>-->
 
-  <!-- Dark Theme: Stars -->
-  <div class='absolute inset-0 bg-black hidden dark:block'>
-    <div id='stars1' class='fixed inset-0'></div>
-    <div id='stars2' class='fixed inset-0'></div>
-    <div id='stars3' class='fixed inset-0'></div>
-  </div>
+  <!--&lt;!&ndash; Dark Theme: Stars &ndash;&gt;-->
+  <!--<div class='absolute inset-0 bg-black hidden dark:block'>-->
+  <!--  <div id='stars1' class='fixed inset-0'></div>-->
+  <!--  <div id='stars2' class='fixed inset-0'></div>-->
+  <!--  <div id='stars3' class='fixed inset-0'></div>-->
+  <!--</div>-->
 
-  <!-- Dark Theme: Twinkling Stars / Metors -->
-  <div id="galaxy" class="fixed inset-0">
-    <div class="hidden dark:block">
-      <TwinklingStars/>
-      <MeteorShower/>
-    </div>
-  </div>
+  <!--&lt;!&ndash; Dark Theme: Twinkling Stars / Metors &ndash;&gt;-->
+  <!--<div id="galaxy" class="fixed inset-0">-->
+  <!--  <div class="hidden dark:block">-->
+  <!--    <TwinklingStars/>-->
+  <!--    <MeteorShower/>-->
+  <!--  </div>-->
+  <!--</div>-->
 
-  <script is:inline src="/js/bg.js"></script>
+  <!--<script is:inline src="/js/bg.js"></script>-->
 
   <!-- HERO -->
   <section class="relative h-screen w-full">
@@ -75,33 +76,37 @@ const stack = [
           <div id="blur" class='w-full h-20 rounded-full bg-neutral-900/25 dark:bg-white/25 blur-3xl'/>
         </div>
       </div>
+
     </div>
     <div class="animate absolute h-full w-full flex items-center justify-center">
       <div class='relative w-full h-full flex items-center justify-center'>
-        <div class='p-5 text-center'>
-          <p class='animated text-lg md:text-xl lg:text-2xl font-semibold opacity-75'>
-            Hello, I am ...
+        <div class='p-5 text-center block'>
+          <p class='animated text-2xl md:text-2xl lg:text-2xl font-semibold uppercase text-black dark:text-white mb-3 opacity-75'>
+            Bob Stoute
           </p>
-          <p class='animated text-2xl md:text-3xl lg:text-4xl font-bold uppercase text-black dark:text-white'>
-            Astro Sphere
+          <p class='animated text-xl md:text-xl lg:text-xl font-bold uppercase opacity-75'>
+            Media Programming
           </p>
-          <p class='animated text-sm md:text-base lg:text-lg opacity-75'>
-            Currently designing products for humans.
+          <p class="flex items-center justify-center mt-5 mb-5">
+            <img src='/brand.svg' class='animated  w-18 h-18 '/>
           </p>
-          <div id="ctaButtons" class='animated flex flex-wrap gap-4 justify-center mt-5'>
-            <a href='/blog' class='py-2 px-4 rounded truncate text-xs md:text-sm lg:text-base bg-black dark:bg-white text-white dark:text-black hover:opacity-75 blend'>
-              Read my blog
-            </a>
-            <a href='/work' class='py-2 px-4 truncate rounded text-xs md:text-sm lg:text-base border border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15 blend'>
-              View my work
-            </a>
-          </div>
+            <p class='text-sm md:text-base  font-semibold uppercase opacity-75'>
+                dev-stack
+            </p>
+            <p class='text-sm md:text-base lg:text-lg opacity-75'>
+              Astro / Firebase / Next / React / Stencil / Tailwind<br/>
+            </p>
+            <!--<div class="flex items-center justify-center mt-5 mb-5">-->
+            <!--  <a href="#about"><Icon class="block scale-10 w-20 h-20" name="mdi:arrow-down-bold-circle" /></a>-->
+            <!--</div>-->
         </div>
       </div>
+
+
     </div>
   </section>
 
-  <div class="relative bg-white dark:bg-black">
+  <div id="about" class="relative bg-white dark:bg-black">
     <div class="mx-auto max-w-screen-sm p-5 space-y-24 pb-16">
 
       <!-- About Section -->
