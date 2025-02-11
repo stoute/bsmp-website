@@ -6,6 +6,14 @@
   --copy-btn-margin:10px;
 }
 
+@theme {
+  --*: initial;
+  --pt-20: 50rem;
+  --spacing: 2.25rem;
+  --text-base: 4.125rem;
+
+}
+
 @layer base {
   @font-face {
     font-family: "Atkinson";
@@ -14,7 +22,7 @@
     font-style: normal;
     font-display: swap;
   }
-  
+
   @font-face {
     font-family: "Atkinson";
     src: url("/fonts/atkinson-bold.woff") format("woff");
@@ -29,7 +37,7 @@ html {
   color-scheme: light;
   background-color: white;
   font-family: "Atkinson", sans-serif;
-  
+
 }
 
 html.dark {
