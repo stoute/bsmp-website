@@ -2,15 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  /*border: 1px inset rgba(255, 255, 255, 0.5);*/
+}
+
 :root{
   --copy-btn-margin:10px;
 }
 
 @theme {
-  --*: initial;
-  --pt-20: 50rem;
-  --spacing: 2.25rem;
-  --text-base: 4.125rem;
+  --*: initial;;
 
 }
 
@@ -37,6 +38,7 @@ html {
   color-scheme: light;
   background-color: white;
   font-family: "Atkinson", sans-serif;
+  scroll-behavior: smooth!important;
 
 }
 
@@ -54,6 +56,10 @@ body {
 
 body {
   @apply relative flex flex-col;
+}
+
+.background-image {
+  @apply h-screen bg-subway bg-cover bg-center bg-no-repeat bg-opacity-60 overflow-y-scroll;
 }
 
 main {
@@ -75,8 +81,16 @@ header.scrolled {
   @apply backdrop-blur-sm saturate-200;
 }
 
+section {
+  @apply bg-transparent !important;
+}
+
 article {
-  @apply prose dark:prose-invert max-w-full pb-12;
+  @apply prose dark:prose-invert;
+  @apply prose-h1:font-bold prose-h1:text-xl;
+  @apply prose-h2:font-bold prose-h2:text-lg;
+  @apply prose-img:rounded-md;
+  @apply prose-hr:mt-6 prose-hr:mb-6;
 }
 
 .page-heading {

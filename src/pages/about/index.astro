@@ -23,6 +23,8 @@ const data = [...posts, ...projects] as CollectionEntry<"blog">[];
     </div>
   </TopLayout>
   <BottomLayout>
-    <About />
+    <article class="prose dark:prose-invert">
+      <About />
+    </article>
   </BottomLayout>
 </PageLayout>

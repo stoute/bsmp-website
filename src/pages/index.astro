@@ -69,8 +69,10 @@ const stack = [
   <!--<script is:inline src="/js/bg.js"></script>-->
 
   <!-- HERO -->
+  <div class="background-image">
   <section class="relative h-screen w-full">
-    <div id="planetcont" class='animate absolute inset-0 top-1/4 overflow-hidden'>
+
+    <div id="planetcont" class=' absolute inset-0 top-1/4 overflow-hidden opacity-50'>
       <div id="crescent" class='absolute top-0 left-1/2 -translate-x-1/2 w-[250vw] min-h-[100vh] aspect-square rounded-full p-[1px] bg-gradient-to-b from-black/25 dark:from-white/75 from-0% to-transparent to-5%'>
         <div id="planet" class='w-full h-full bg-white dark:bg-black rounded-full p-[1px] overflow-hidden flex justify-center'>
           <div id="blur" class='w-full h-20 rounded-full bg-neutral-900/25 dark:bg-white/25 blur-3xl'/>
@@ -96,9 +98,9 @@ const stack = [
             <p class='text-sm md:text-base lg:text-lg opacity-75'>
               Astro / Firebase / Next / React / Stencil / Tailwind<br/>
             </p>
-            <!--<div class="flex items-center justify-center mt-5 mb-5">-->
-            <!--  <a href="#about"><Icon class="block scale-10 w-20 h-20" name="mdi:arrow-down-bold-circle" /></a>-->
-            <!--</div>-->
+            <div class="flex items-center justify-center mt-5 mb-5">
+              <a href="#about"><Icon class="block scale-10 w-20 h-20" name="mdi:arrow-down-bold-circle" /></a>
+            </div>
         </div>
       </div>
 
@@ -106,7 +108,8 @@ const stack = [
     </div>
   </section>
 
-  <div id="about" class="relative bg-white dark:bg-black">
+
+  <section id="about" class="relative bg-white dark:bg-black relative h-screen w-full  text-center">
     <div class="mx-auto max-w-screen-sm p-5 space-y-24 pb-16">
 
       <!-- About Section -->
@@ -114,34 +117,10 @@ const stack = [
         <article>
           <p>I am a <b><i>software engineer</i></b>, <b><i>ui/ux designer</i></b>, <b><i>product planner</i></b>, <b><i>mentor</i></b>, <b><i>student</i></b>, <b><i>minimalist</i></b>, <b><i>eternal optimist</i></b>, <b><i>crypto enthusiast</i></b> and <b><i>sarcasm connoisseur</i></b>.</p>
           <p>I love to both build and break things. I am motivated by challenging projects with self-guided research and dynamic problem solving. My true passion is crafting creative front end designs with unique takes on color, typography and motion.</p>
-          <p>During my career</p>
           <p>I have built products ranging from marketing and ecommerce websites to complex enterprise apps with focus on delivering fast, elegant code along with delightful user interfaces.</p>
           <p>Now</p>
           <p>I currently work as a software engineer at StreamlineFS, where I do product planning, design and development.</p>
         </article>
-      </section>
-
-      <!-- Blog Preview Section -->
-      <section class="animate">
-        <div class="space-y-4">
-          <div class="flex justify-between">
-            <p class="font-semibold text-black dark:text-white">
-              Recent posts
-            </p>
-            <a href="/blog" class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
-              <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">
-                All posts
-              </span>
-            </a>
-          </div>
-          <ul class="space-y-4">
-            {posts.map((post) => (
-              <li>
-                <ArrowCard entry={post} />
-              </li>
-            ))}
-          </ul>
-        </div>
       </section>
 
       <!-- Tech Stack Section -->
@@ -219,6 +198,31 @@ const stack = [
             ))}
         </div>
       </section>
+
+      <!-- Blog Preview Section -->
+      <!--<section class="animate">-->
+      <!--  <div class="space-y-4">-->
+      <!--    <div class="flex justify-between">-->
+      <!--      <p class="font-semibold text-black dark:text-white">-->
+      <!--        Recent posts-->
+      <!--      </p>-->
+      <!--      <a href="/blog" class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">-->
+      <!--        <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">-->
+      <!--          All posts-->
+      <!--        </span>-->
+      <!--      </a>-->
+      <!--    </div>-->
+      <!--    <ul class="space-y-4">-->
+      <!--      {posts.map((post) => (-->
+      <!--        <li>-->
+      <!--          <ArrowCard entry={post} />-->
+      <!--        </li>-->
+      <!--      ))}-->
+      <!--    </ul>-->
+      <!--  </div>-->
+      <!--</section>-->
     </div>
-  </div>
+  </section>
+
+    </div>
 </PageLayout>
