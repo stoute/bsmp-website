@@ -3,7 +3,6 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import PageLayout from "@layouts/PageLayout.astro";
 import TopLayout from "@layouts/TopLayout.astro";
 import BottomLayout from "@layouts/BottomLayout.astro";
-// import About from "./about.mdx";
 import { SEARCH } from "@consts";
 import AboutSvg from "@images/about.svg";
 
@@ -14,17 +13,17 @@ const projects = (await getCollection("projects")).filter(
 ---
 
 <PageLayout title={SEARCH.TITLE} description={SEARCH.DESCRIPTION}>
-  <div class="bg-subwayDark background-image ">
+  <div class="bg-subwayDark background-image">
+    <div class="animate h-full text-center flex items-center justify-center">
+      <AboutSvg />
+    </div>
+  </div>
   <TopLayout>
 
-    <div class="animate text-center flex flex-col items-center justify-center">
-      <AboutSvg />
-      <!--<img class="" src="/images/about.svg" />-->
-    </div>
   </TopLayout>
-  <BottomLayout>
-    <article class="prose dark:prose-invert">
-      <!--<About />-->
-    </article>
-  </BottomLayout>
+  <!--<BottomLayout>-->
+  <!--  <article class="prose dark:prose-invert">-->
+  <!--    &lt;!&ndash;<About />&ndash;&gt;-->
+  <!--  </article>-->
+  <!--</BottomLayout>-->
 </PageLayout>

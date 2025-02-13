@@ -9,7 +9,7 @@ import icon from "astro-icon";
 // https://astro.build/config
 export default defineConfig({
   site: "https://astro-sphere-demo.vercel.app",
-  output: "server", // Use 'server' or 'hybrid' for SSR
+  output: "static", // Use 'server' for SSR
   base: "/",
   adapter: node({
     mode: "middleware",
