@@ -82,7 +82,7 @@ header.scrolled {
 }
 
 section {
-  @apply bg-transparent !important;
+  /*@apply bg-transparent !important;*/
 }
 
 article {

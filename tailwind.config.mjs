@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        subway: "url('images/background_subway.jpg')",
-        subwayDark: "url('images/background_subway-dark.jpg')",
+        subway: "url('/images/background_subway.jpg')",
+        subwayDark: "url('/images/background_subway-dark.jpg')",
       },
       fontFamily: {
         sans: ["Atkinson", ...defaultTheme.fontFamily.sans],
