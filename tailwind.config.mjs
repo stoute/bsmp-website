@@ -11,7 +11,8 @@ export default {
         subwayDark: "url('/images/background_subway-dark.jpg')",
       },
       fontFamily: {
-        sans: ["Atkinson", ...defaultTheme.fontFamily.sans],
+        // sans: ["Atkinson", ...defaultTheme.fontFamily.sans],
+        sans: ["Open Sans", ...defaultTheme.fontFamily.sans],
       },
       typography: {
         DEFAULT: {

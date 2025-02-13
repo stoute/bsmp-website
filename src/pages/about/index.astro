@@ -3,8 +3,9 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import PageLayout from "@layouts/PageLayout.astro";
 import TopLayout from "@layouts/TopLayout.astro";
 import BottomLayout from "@layouts/BottomLayout.astro";
-import About from "./about.mdx";
+// import About from "./about.mdx";
 import { SEARCH } from "@consts";
+import AboutSvg from "@images/about.svg";
 
 const projects = (await getCollection("projects")).filter(
   (post) => !post.data.draft
@@ -17,12 +18,13 @@ const projects = (await getCollection("projects")).filter(
   <TopLayout>
 
     <div class="animate text-center flex flex-col items-center justify-center">
-      <img class="scale-50" src="/images/about@3x.png" />
+      <AboutSvg />
+      <!--<img class="" src="/images/about.svg" />-->
     </div>
   </TopLayout>
   <BottomLayout>
     <article class="prose dark:prose-invert">
-      <About />
+      <!--<About />-->
     </article>
   </BottomLayout>
 </PageLayout>

@@ -23,4 +23,7 @@ export default defineConfig({
     }),
     icon(),
   ],
+  experimental: {
+    svg: true,
+  },
 });

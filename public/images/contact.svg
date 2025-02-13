@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="150px" height="522px" viewBox="0 0 150 522" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="144px" height="439px" viewBox="0 0 144 439" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>contact</title>
     <g id="contact" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="section-contact" transform="translate(-76.000000, -1.000000)">
+        <g id="section-contact" transform="translate(-79.000000, -1.000000)">
             <image id="Bitmap" x="135.44702" y="0" width="32.1059603" height="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGOfPtRkwAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAABq0lEQVRYCdVWi3GDMAwNnSAjMAIjsEG7Qdmg2aQzdIRM4GxANukI9D1qgWOMZYxJr7rTyej3JBl0nE7/mYZhOJOf2gMAO7AB+2Sg6A4rBslrcA/WiD510UKYEPytITt2+pYrAslSOnfwx2NfZApIxTvPpU4r4kVzgP09wWfNRY2t1iJFz9blnCMrUCwuOgFgH/6NRwuIVZ5qQxN1zDc6Hgb+6RXYym9W5gg1NuUKvnKQbcye2BkW15CziHh7Qoy/gPNeagRuXcUC7Euu6Le5tQ0nW0TKJAx82W1rmWcDdqnbAP3oiixczcbNZs/srn30np9oA9NHKG8SkhJZ+DMiCSkbsVEKiqdrvJi8d8ICfAoIZOsCWftoDug5CaHLaMcT70m6EWOqND6I9ozExibvOSqC76HfLjRUxw6wCZOL6MOx5RzvoSDpKGSDbophAfWK01PUKatYK6TRHAL2KaZEAa8BAE01x8hd7ZStjyj5Anr3MxymhSEBmTJnEY1QpQpgMhaxmIRMgDbrAzFTxaM4FZI35LmC5VPjC8c7b8ELOqKABUhMUeIriOVXbT+5200J/TPhEQAAAABJRU5ErkJggg=="></image>
-            <g id="Group" transform="translate(79.258278, 301.000000)">
+            <g id="Group" transform="translate(79.258278, 218.000000)">
                 <g transform="translate(1.003311, 0.000000)" id="Page-1">
                     <path d="M95.3145695,0.0001 L118.390728,0.0001 C119.343874,1.4441 121.084619,0.8431 122.370864,1.5031 C123.533702,2.0991 125.105891,2.4351 124.729649,4.0261 C124.197894,6.2741 124.574136,8.0391 125.851351,9.9881 C126.845632,11.5051 125.261404,12.6981 124.201907,13.7361 C123.125354,14.7911 121.946464,15.1331 120.700351,13.9971 C119.974957,13.3351 119.353907,12.5171 118.214146,12.6051 C120.321099,18.4651 118.726838,23.4361 114.623295,27.8521 C114.356414,28.1381 114.535003,28.8171 114.572126,29.3151 C114.686503,30.5471 114.947364,31.7461 115.326616,32.9321 C115.334642,36.6811 113.547745,37.4451 110.404371,35.8311 C109.406076,35.3191 108.428851,34.7711 107.379387,34.3951 C105.59249,33.3091 103.764457,32.3111 101.624394,32.5561 C104.330325,33.7131 106.070066,35.4561 105.690815,38.5901 C105.406877,38.9771 105.108894,39.3511 104.801881,39.7191 C103.346076,41.3511 101.895288,42.8751 99.8114106,43.8851 C94.7587351,46.3341 91.0394603,50.3301 87.9883907,54.9721 C86.7783974,55.7411 85.7640497,56.8271 84.3152682,57.2221 C79.0358444,56.7921 76.1412914,60.8731 72.4430861,63.4231 C71.6314073,63.3611 70.5588675,63.2831 70.3782715,62.4961 C69.357904,58.0331 66.2085099,58.1501 62.7490927,58.8301 C59.3418477,57.8291 57.8639702,53.0091 53.3641192,54.1221 C50.008043,54.1711 47.9462384,51.6041 45.3265927,50.1611 C40.7996523,47.4261 36.1151921,44.9561 31.421702,42.5441 C27.5218311,40.5401 22.9106126,40.2071 19.1040497,37.7401 C17.9642881,37.0011 16.8385728,36.4311 16.2476225,35.1581 C15.3004967,33.6401 15.2994934,32.2361 16.7342285,31.0011 C18.3565828,29.3291 20.2498311,31.4201 21.9343907,30.6291 C23.8687748,31.4791 25.8412848,30.4191 27.7897152,30.7291 C30.4856126,33.4141 33.3490629,35.7731 37.510798,35.5131 C37.9763344,35.5431 38.4238113,35.6521 38.8502185,35.8391 C43.0320199,38.1921 48.4820066,37.3131 52.1400795,41.0101 C55.7961457,45.1131 61.0524934,42.8611 65.3687384,44.3091 C65.8463146,44.3101 66.3258974,44.3191 66.8074868,44.3041 C66.9720298,44.3101 67.1686788,44.2881 67.2930894,44.3731 C69.7792947,46.0741 71.8531391,48.9871 75.5322815,47.2021 C79.112096,45.4641 78.1348709,41.9181 78.7428775,39.0041 C80.659202,37.2881 81.3755662,33.6301 85.2162417,34.9891 C81.8411026,32.2841 81.3785762,29.9891 83.7534139,27.0631 C84.7737815,25.8061 86.3038311,24.9861 86.974043,23.4121 C88.1960762,20.9741 91.7548212,22.0781 92.9006026,19.5141 C93.4985762,16.1191 93.7313444,12.6811 93.4213212,9.2891 C93.1604603,6.4421 93.3019272,4.2051 96.7613444,3.9081 C100.995318,3.5451 102.831377,5.0591 102.904619,9.0021 C102.915656,9.6171 103.106285,10.2451 103.002944,10.8251 C103.045083,10.7831 102.973848,11.2071 102.973848,11.2071 C102.973848,11.2071 103.034046,10.7861 103.021003,10.7711 C103.34407,6.2281 102.154142,3.5011 96.6680364,3.9561 C94.0754801,4.1711 93.2638013,2.1961 95.3145695,0.0001" id="Fill-1" fill="#2B2B2B"></path>
                     <path d="M38.1263295,36.9983 L37.1220149,37.0003 C33.8191142,35.5653 31.0860944,32.7093 27.0889023,33.0023 C24.9679023,34.8963 23.7187798,32.4653 22.0743526,31.9963 C19.7757666,31.1293 18.3079222,29.6683 18.5025646,27.0223 C18.8316507,23.5843 19.7276076,20.7543 23.7749652,19.8043 C26.7668394,19.1023 26.7196838,15.1873 29.5550414,13.9863 C21.7803825,8.5123 21.4904255,7.5463 25.0822798,0.0003 L27.0889023,0.0003 C28.4273195,0.7583 29.7647334,1.1003 31.1021474,0.0003 L51.1683725,0.0003 C52.3011109,0.9733 53.0987434,2.1193 53.5060877,3.6013 C53.9274785,5.1313 54.91875,5.8273 56.6835745,6.1153 C62.2118195,7.0163 64.5655877,10.5213 63.7880215,16.0933 C64.1181109,18.5043 62.251952,19.0153 60.6265877,19.8073 C58.796548,20.6993 56.933399,21.6643 58.5407036,24.2133 C59.5279619,28.2843 57.0176772,31.8093 56.6434421,35.7003 C56.4919421,37.2803 54.2665977,36.9293 52.765644,37.0543 C47.8775116,37.4633 43.0054321,36.1623 38.1263295,36.9983" id="Fill-3" fill="#303030"></path>
@@ -473,21 +473,16 @@
                 </g>
                 <rect id="Rectangle-2" stroke="#979797" x="0.5" y="0.5" width="142.47351" height="221"></rect>
             </g>
-            <text id="contact" font-family="AtkinsonHyperlegible-Bold, Atkinson Hyperlegible" font-size="24" font-weight="bold" fill="#FFFFFF">
-                <tspan x="109.874159" y="71">contact</tspan>
+            <text id="contact" font-family="OpenSansRoman-Bold, Open Sans" font-size="24" font-weight="bold" fill="#FFFFFF">
+                <tspan x="106.503893" y="71">contact</tspan>
             </text>
-            <text id="bob-stoute-mail-stou" font-family="AtkinsonHyperlegible-Bold, Atkinson Hyperlegible" font-size="15" font-weight="bold" fill="#FFFFFF">
-                <tspan x="113.355" y="108">bob stoute</tspan>
-                <tspan x="189.645" y="108" font-family="AtkinsonHyperlegible-Regular, Atkinson Hyperlegible" font-weight="normal"></tspan>
-                <tspan x="151.5" y="126" font-family="AtkinsonHyperlegible-Regular, Atkinson Hyperlegible" font-weight="normal"></tspan>
-                <tspan x="137.37" y="144" font-family="AtkinsonHyperlegible-Regular, Atkinson Hyperlegible" font-weight="normal">mail</tspan>
-                <tspan x="76.5675" y="162" font-family="AtkinsonHyperlegible-Regular, Atkinson Hyperlegible" font-weight="normal">stoute.bob@gmail.com</tspan>
-                <tspan x="151.5" y="180" font-family="AtkinsonHyperlegible-Regular, Atkinson Hyperlegible" font-weight="normal"></tspan>
-                <tspan x="138.3075" y="198" font-family="AtkinsonHyperlegible-Regular, Atkinson Hyperlegible" font-weight="normal">web</tspan>
-                <tspan x="94.5975" y="216" font-family="AtkinsonHyperlegible-Regular, Atkinson Hyperlegible" font-weight="normal">www.bobstoute.nl</tspan>
-                <tspan x="151.5" y="234" font-family="AtkinsonHyperlegible-Regular, Atkinson Hyperlegible" font-weight="normal"></tspan>
-                <tspan x="118.875" y="252" font-family="AtkinsonHyperlegible-Regular, Atkinson Hyperlegible" font-weight="normal">rotterdam</tspan>
-                <tspan x="100.3125" y="270" font-family="AtkinsonHyperlegible-Regular, Atkinson Hyperlegible" font-weight="normal">the netherlands</tspan>
+            <text id="bob-stoute-stoute.nl" font-family="OpenSansRoman-Bold, Open Sans" font-size="15" font-weight="bold" fill="#FFFFFF">
+                <tspan x="111.172852" y="108">bob stoute</tspan>
+                <tspan x="191.827148" y="108" font-family="OpenSans-Regular, Open Sans" font-weight="normal"></tspan>
+                <tspan x="120.793213" y="128" font-family="OpenSans-Regular, Open Sans" font-weight="normal">stoute.nl</tspan>
+                <tspan x="151.5" y="148" font-family="OpenSans-Regular, Open Sans" font-weight="normal"></tspan>
+                <tspan x="115.600342" y="168" font-family="OpenSans-Regular, Open Sans" font-weight="normal">rotterdam</tspan>
+                <tspan x="95.8835449" y="188" font-family="OpenSans-Regular, Open Sans" font-weight="normal">the netherlands</tspan>
             </text>
         </g>
     </g>
