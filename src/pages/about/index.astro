@@ -3,23 +3,21 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import PageLayout from "@layouts/PageLayout.astro";
 import TopLayout from "@layouts/TopLayout.astro";
 import BottomLayout from "@layouts/BottomLayout.astro";
-import Search from "@components/Search";
 import About from "./about.mdx";
 import { SEARCH } from "@consts";
-
-const posts = (await getCollection("blog")).filter((post) => !post.data.draft);
 
 const projects = (await getCollection("projects")).filter(
   (post) => !post.data.draft
 );
 
-const data = [...posts, ...projects] as CollectionEntry<"blog">[];
 ---
 
 <PageLayout title={SEARCH.TITLE} description={SEARCH.DESCRIPTION}>
+  <div class="bg-subwayDark background-image ">
   <TopLayout>
-    <div class="animate page-heading">
-      {SEARCH.TITLE}
+
+    <div class="animate page-heading text-center flex flex-col items-center justify-center">
+      <img src="/images/about.svg" />
     </div>
   </TopLayout>
   <BottomLayout>

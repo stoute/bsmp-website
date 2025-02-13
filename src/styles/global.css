@@ -59,7 +59,7 @@ body {
 }
 
 .background-image {
-  @apply h-screen bg-subway bg-cover bg-center bg-no-repeat bg-opacity-60 overflow-y-scroll;
+  @apply h-screen bg-cover bg-center bg-no-repeat bg-opacity-60 overflow-y-scroll;
 }
 
 main {
