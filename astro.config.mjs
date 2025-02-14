@@ -6,14 +6,14 @@ import solidJs from "@astrojs/solid-js";
 import node from "@astrojs/node";
 import icon from "astro-icon";
 
+import vercel from "@astrojs/vercel";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://app-browser-10b90.firebaseapp.com",
   output: "server", // Use 'server' for SSR, 'static' is default - for SSG
   base: "/",
-  adapter: node({
-    mode: "middleware",
-  }),
+  adapter: vercel(),
   integrations: [
     mdx(),
     sitemap(),
