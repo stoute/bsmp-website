@@ -9,7 +9,7 @@ import icon from "astro-icon";
 // https://astro.build/config
 export default defineConfig({
   site: "https://app-browser-10b90.firebaseapp.com",
-  output: "server", // Use 'server' for SSR, 'static' is default for SSG
+  output: "server", // Use 'server' for SSR, 'static' is default - for SSG
   base: "/",
   adapter: node({
     mode: "middleware",
