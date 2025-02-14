@@ -13,7 +13,9 @@ export default defineConfig({
   site: "https://app-browser-10b90.firebaseapp.com",
   output: "static", // Use 'server' for SSR, 'static' is default - for SSG
   base: "/",
-  adapter: node(),
+  adapter: node({
+    mode: "middleware"
+  }),
   integrations: [
     mdx(),
     sitemap(),
