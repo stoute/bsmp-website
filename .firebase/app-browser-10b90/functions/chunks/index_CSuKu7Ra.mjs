@@ -1,4 +1,4 @@
-import { c as createComponent, d as createAstro, r as renderTemplate, m as maybeRenderHead, f as renderSlot, b as createVNode, F as Fragment, _ as __astro_tag_component__ } from './astro/server_L_530bJq.mjs';
+import { c as createComponent, b as createAstro, r as renderTemplate, m as maybeRenderHead, e as renderSlot, n as createVNode, F as Fragment, aw as __astro_tag_component__ } from './astro/server_BPTSoEb2.mjs';
 import 'clsx';
 import { ssr, ssrHydrationKey, escape } from 'solid-js/web';
 import { createSignal } from 'solid-js';
@@ -12,7 +12,7 @@ const $$MyComponent = createComponent(($$result, $$props, $$slots) => {
 Hello,
 <span class="font-semibold"> ${name}!!!
 </span> </div> ${renderSlot($$result, $$slots["default"])} </div>`;
-}, "/Users/bobstoute/Git/@bsmp/astro-sphere/src/content/blog/05-astro-sphere-writing-mdx/MyComponent.astro", void 0);
+}, "/Users/bobstoute/Git/@bsmp/bsmp-website/src/content/blog/05-astro-sphere-writing-mdx/MyComponent.astro", void 0);
 
 var _tmpl$ = ["<div", ' class="flex gap-4 items-center"><button class="px-3 py-1 border border-black/25 dark:border-white/25 hover:bg-black/5 dark:hover:bg-white/15 blend">Increment</button><div>Clicked <!--$-->', "<!--/--> <!--$-->", "<!--/--></div></div>"];
 function CounterButton() {
@@ -161,14 +161,14 @@ function MDXContent(props = {}) {
 }
 
 const url = "src/content/blog/05-astro-sphere-writing-mdx/index.mdx";
-const file = "/Users/bobstoute/Git/@bsmp/astro-sphere/src/content/blog/05-astro-sphere-writing-mdx/index.mdx";
+const file = "/Users/bobstoute/Git/@bsmp/bsmp-website/src/content/blog/05-astro-sphere-writing-mdx/index.mdx";
 const Content = (props = {}) => MDXContent({
   ...props,
   components: { Fragment: Fragment, ...props.components, },
 });
 Content[Symbol.for('mdx-component')] = true;
 Content[Symbol.for('astro.needsHeadRendering')] = !Boolean(frontmatter.layout);
-Content.moduleId = "/Users/bobstoute/Git/@bsmp/astro-sphere/src/content/blog/05-astro-sphere-writing-mdx/index.mdx";
+Content.moduleId = "/Users/bobstoute/Git/@bsmp/bsmp-website/src/content/blog/05-astro-sphere-writing-mdx/index.mdx";
 __astro_tag_component__(Content, 'astro:jsx');
 
 export { Content, Content as default, file, frontmatter, getHeadings, url };

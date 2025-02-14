@@ -1,5 +1,5 @@
 import { generateHydrationScript, renderToStringAsync, renderToString, ssr, createComponent, Suspense, NoHydration } from 'solid-js/web';
-import { n as renderJSX, b as createVNode, o as AstroJSX, p as AstroUserError } from './chunks/astro/server_L_530bJq.mjs';
+import { l as renderJSX, n as createVNode, o as AstroJSX, p as AstroUserError } from './chunks/astro/server_BPTSoEb2.mjs';
 import 'clsx';
 
 const contexts = /* @__PURE__ */ new WeakMap();
@@ -150,6 +150,6 @@ const renderer = {
 };
 var server_default = renderer;
 
-const renderers = [Object.assign({"name":"@astrojs/solid-js","clientEntrypoint":"@astrojs/solid-js/client.js","serverEntrypoint":"@astrojs/solid-js/server.js"}, { ssr: server_default$1 }),Object.assign({"name":"astro:jsx","serverEntrypoint":"file:///Users/bobstoute/Git/@bsmp/astro-sphere/node_modules/.pnpm/@astrojs+mdx@4.0.8_astro@5.2.6_jiti@1.21.0_rollup@4.34.6_typescript@5.4.2_yaml@2.7.0_/node_modules/@astrojs/mdx/dist/server.js"}, { ssr: server_default }),];
+const renderers = [Object.assign({"name":"@astrojs/solid-js","clientEntrypoint":"@astrojs/solid-js/client.js","serverEntrypoint":"@astrojs/solid-js/server.js"}, { ssr: server_default$1 }),Object.assign({"name":"astro:jsx","serverEntrypoint":"file:///Users/bobstoute/Git/@bsmp/bsmp-website/node_modules/.pnpm/@astrojs+mdx@4.0.8_astro@5.2.6_jiti@1.21.0_rollup@4.34.6_typescript@5.4.2_yaml@2.7.0_/node_modules/@astrojs/mdx/dist/server.js"}, { ssr: server_default }),];
 
 export { renderers };

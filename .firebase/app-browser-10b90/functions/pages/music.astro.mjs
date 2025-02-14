@@ -1,7 +1,7 @@
-import { c as createComponent, r as renderTemplate, a as renderComponent, m as maybeRenderHead } from '../chunks/astro/server_L_530bJq.mjs';
-import { $ as $$PageLayout } from '../chunks/PageLayout_DE8aaVdV.mjs';
-import { $ as $$BottomLayout } from '../chunks/BottomLayout_CKdcdOcQ.mjs';
-import { S as SEARCH } from '../chunks/consts_CTx5aLnM.mjs';
+import { c as createComponent, r as renderTemplate, a as renderComponent, m as maybeRenderHead } from '../chunks/astro/server_BPTSoEb2.mjs';
+import { $ as $$PageLayout } from '../chunks/PageLayout_Be2zWfzu.mjs';
+import { $ as $$BottomLayout } from '../chunks/BottomLayout_DcReYWMS.mjs';
+import { S as SEARCH } from '../chunks/consts_CNykIgmw.mjs';
 /* empty css                                 */
 export { renderers } from '../renderers.mjs';
 
@@ -22,9 +22,9 @@ Club / Dance - 2000 / 2010
 <iframe width="100%" height="200" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/684778335&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true" data-astro-cid-cba3rxsa></iframe>
 Ambient - 2019
 <iframe width="100%" height="200" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/824248331&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true" data-astro-cid-cba3rxsa></iframe> </div> </article> ` })} </div>` })}`;
-}, "/Users/bobstoute/Git/@bsmp/astro-sphere/src/pages/music/index.astro", void 0);
+}, "/Users/bobstoute/Git/@bsmp/bsmp-website/src/pages/music/index.astro", void 0);
 
-const $$file = "/Users/bobstoute/Git/@bsmp/astro-sphere/src/pages/music/index.astro";
+const $$file = "/Users/bobstoute/Git/@bsmp/bsmp-website/src/pages/music/index.astro";
 const $$url = "/music";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({

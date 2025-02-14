@@ -1,6 +1,6 @@
 import rss from '@astrojs/rss';
-import { g as getCollection } from '../chunks/_astro_content_CVsRcgip.mjs';
-import { a as SITE } from '../chunks/consts_CTx5aLnM.mjs';
+import { g as getCollection } from '../chunks/_astro_content_DuTYth8C.mjs';
+import { b as SITE } from '../chunks/consts_CNykIgmw.mjs';
 export { renderers } from '../renderers.mjs';
 
 async function GET(context) {

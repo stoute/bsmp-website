@@ -1,12 +1,12 @@
-import { c as createComponent$1, r as renderTemplate, a as renderComponent, m as maybeRenderHead } from '../chunks/astro/server_L_530bJq.mjs';
-import { g as getCollection } from '../chunks/_astro_content_CVsRcgip.mjs';
-import { c as cn, $ as $$PageLayout } from '../chunks/PageLayout_DE8aaVdV.mjs';
-import { $ as $$TopLayout } from '../chunks/TopLayout_DLuDQ_vj.mjs';
-import { $ as $$BottomLayout } from '../chunks/BottomLayout_CKdcdOcQ.mjs';
+import { c as createComponent$1, r as renderTemplate, a as renderComponent, m as maybeRenderHead } from '../chunks/astro/server_BPTSoEb2.mjs';
+import { g as getCollection } from '../chunks/_astro_content_DuTYth8C.mjs';
+import { c as cn, $ as $$PageLayout } from '../chunks/PageLayout_Be2zWfzu.mjs';
+import { $ as $$TopLayout } from '../chunks/TopLayout_BimL7V3q.mjs';
+import { $ as $$BottomLayout } from '../chunks/BottomLayout_DcReYWMS.mjs';
 import { ssr, ssrHydrationKey, escape, createComponent, ssrAttribute } from 'solid-js/web';
 import { createSignal, createEffect, For } from 'solid-js';
-import { A as ArrowCard } from '../chunks/ArrowCard_C7uOdg1R.mjs';
-import { P as PROJECTS } from '../chunks/consts_CTx5aLnM.mjs';
+import { A as ArrowCard } from '../chunks/ArrowCard_DTGIlLJ6.mjs';
+import { P as PROJECTS } from '../chunks/consts_CNykIgmw.mjs';
 export { renderers } from '../renderers.mjs';
 
 var _tmpl$ = ["<div", ' class="grid grid-cols-1 sm:grid-cols-3 gap-6"><div class="col-span-3 sm:col-span-1"><div class="sticky top-24"><div class="text-sm font-semibold uppercase mb-2 text-black dark:text-white">Filter</div><ul class="flex flex-wrap sm:flex-col gap-1.5">', '</ul></div></div><div class="col-span-3 sm:col-span-2"><div class="flex flex-col"><div class="text-sm uppercase mb-2">SHOWING <!--$-->', "<!--/--> OF <!--$-->", '<!--/--> PROJECTS</div><ul class="flex flex-col gap-3">', "</ul></div></div></div>"], _tmpl$2 = ["<li", "><button", "><svg", '><use href="', '"', '></use><use href="', '"', "></use></svg><!--$-->", "<!--/--></button></li>"], _tmpl$3 = ["<li", ">", "</li>"];
@@ -31,9 +31,9 @@ const $$Index = createComponent$1(async ($$result, $$props, $$slots) => {
   const projects = (await getCollection("projects")).filter((project) => !project.data.draft).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
   const tags = [...new Set(projects.flatMap((project) => project.data.tags))].sort((a, b) => a.localeCompare(b));
   return renderTemplate`${renderComponent($$result, "PageLayout", $$PageLayout, { "title": PROJECTS.TITLE, "description": PROJECTS.DESCRIPTION }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<div class="bg-subwayDark background-image "> ${renderComponent($$result2, "TopLayout", $$TopLayout, {}, { "default": ($$result3) => renderTemplate` <div class="animate page-heading"> ${PROJECTS.TITLE} </div> ` })} ${renderComponent($$result2, "BottomLayout", $$BottomLayout, {}, { "default": ($$result3) => renderTemplate` <div class="animate"> ${renderComponent($$result3, "Projects", Projects, { "client:load": true, "tags": tags, "data": projects, "client:component-hydration": "load", "client:component-path": "@components/Projects", "client:component-export": "default" })} </div> ` })} </div>` })}`;
-}, "/Users/bobstoute/Git/@bsmp/astro-sphere/src/pages/projects/index.astro", void 0);
+}, "/Users/bobstoute/Git/@bsmp/bsmp-website/src/pages/projects/index.astro", void 0);
 
-const $$file = "/Users/bobstoute/Git/@bsmp/astro-sphere/src/pages/projects/index.astro";
+const $$file = "/Users/bobstoute/Git/@bsmp/bsmp-website/src/pages/projects/index.astro";
 const $$url = "/projects";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({

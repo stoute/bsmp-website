@@ -1,4 +1,4 @@
-import { b as createVNode, F as Fragment, _ as __astro_tag_component__ } from './astro/server_L_530bJq.mjs';
+import { n as createVNode, F as Fragment, aw as __astro_tag_component__ } from './astro/server_BPTSoEb2.mjs';
 import 'clsx';
 
 const frontmatter = {
@@ -423,14 +423,14 @@ function MDXContent(props = {}) {
 }
 
 const url = "src/content/work/cv-oud.mdx";
-const file = "/Users/bobstoute/Git/@bsmp/astro-sphere/src/content/work/cv-oud.mdx";
+const file = "/Users/bobstoute/Git/@bsmp/bsmp-website/src/content/work/cv-oud.mdx";
 const Content = (props = {}) => MDXContent({
   ...props,
   components: { Fragment: Fragment, ...props.components, },
 });
 Content[Symbol.for('mdx-component')] = true;
 Content[Symbol.for('astro.needsHeadRendering')] = !Boolean(frontmatter.layout);
-Content.moduleId = "/Users/bobstoute/Git/@bsmp/astro-sphere/src/content/work/cv-oud.mdx";
+Content.moduleId = "/Users/bobstoute/Git/@bsmp/bsmp-website/src/content/work/cv-oud.mdx";
 __astro_tag_component__(Content, 'astro:jsx');
 
 export { Content, Content as default, file, frontmatter, getHeadings, url };

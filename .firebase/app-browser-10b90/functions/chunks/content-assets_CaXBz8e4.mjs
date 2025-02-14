@@ -4,7 +4,7 @@ const __ASTRO_IMAGE_IMPORT_Z1sJARh = new Proxy({"src":"/_astro/spongebob.dGmXfKP
 								return structuredClone(target);
 							}
 							if (name === 'fsPath') {
-								return "/Users/bobstoute/Git/@bsmp/astro-sphere/src/content/blog/04-astro-sphere-writing-markdown/spongebob.png";
+								return "/Users/bobstoute/Git/@bsmp/bsmp-website/src/content/blog/04-astro-sphere-writing-markdown/spongebob.png";
 							}
 							
 							return target[name];

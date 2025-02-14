@@ -8,8 +8,8 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astro-sphere-demo.vercel.app",
-  output: "static", // Use 'server' for SSR
+  site: "https://app-browser-10b90.firebaseapp.com",
+  output: "server", // Use 'server' for SSR, 'static' is default for SSG
   base: "/",
   adapter: node({
     mode: "middleware",

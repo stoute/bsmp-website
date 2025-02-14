@@ -6,10 +6,12 @@
     "dev": "astro dev",
     "dev:network": "astro dev --host",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "-build": "astro check && astro build",
+    "build": "astro build",
     "deploy": "npm run build && firebase deploy",
     "preview": "astro preview",
     "preview:network": "astro dev --host",
+    "firebase:emulators:start": "firebase emulators:start",
     "astro": "astro",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"

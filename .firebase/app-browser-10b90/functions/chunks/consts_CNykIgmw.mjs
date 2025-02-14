@@ -36,15 +36,18 @@ const LINKS = [
   },
   {
     TEXT: "Work",
-    HREF: "/work"
+    HREF: "/work",
+    DISABLED: true
   },
   {
     TEXT: "Blog",
-    HREF: "/blog"
+    HREF: "/blog",
+    DISABLED: true
   },
   {
     TEXT: "Projects",
-    HREF: "/projects"
+    HREF: "/projects",
+    DISABLED: true
   }
 ];
 const SOCIALS = [
@@ -74,4 +77,4 @@ const SOCIALS = [
   // },
 ];
 
-export { BLOG as B, LINKS as L, PROJECTS as P, SEARCH as S, WORK as W, SITE as a, SOCIALS as b };
+export { BLOG as B, LINKS as L, PROJECTS as P, SEARCH as S, WORK as W, SOCIALS as a, SITE as b };

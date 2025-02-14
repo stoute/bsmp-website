@@ -1,7 +1,7 @@
-import { d as createAstro, c as createComponent, r as renderTemplate, m as maybeRenderHead, e as addAttribute, a as renderComponent } from './astro/server_L_530bJq.mjs';
+import { b as createAstro, c as createComponent, r as renderTemplate, m as maybeRenderHead, d as addAttribute, a as renderComponent } from './astro/server_BPTSoEb2.mjs';
 import 'clsx';
-import { f as formatDate, r as readingTime } from './PageLayout_DE8aaVdV.mjs';
-import { g as getCollection } from './_astro_content_CVsRcgip.mjs';
+import { f as formatDate, r as readingTime } from './PageLayout_Be2zWfzu.mjs';
+import { g as getCollection } from './_astro_content_DuTYth8C.mjs';
 
 const $$Astro$1 = createAstro("https://astro-sphere-demo.vercel.app");
 const $$ArticleTopLayout = createComponent(($$result, $$props, $$slots) => {
@@ -18,7 +18,7 @@ See Demo
 </span> </a>`} ${repoUrl && renderTemplate`<a${addAttribute(repoUrl, "href")} target="_blank" class="group flex gap-2 items-center px-3 py-1.5 truncate rounded text-xs md:text-sm lg:text-base border border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15 blend"> <svg class="size-4"> <use href="/ui.svg#link" class="fill-current group-hover:fill-black group-hover:dark:fill-white blend"></use> </svg> <span class="text-current group-hover:text-black group-hover:dark:text-white blend">
 See Repository
 </span> </a>`} </div>`} </div>`;
-}, "/Users/bobstoute/Git/@bsmp/astro-sphere/src/layouts/ArticleTopLayout.astro", void 0);
+}, "/Users/bobstoute/Git/@bsmp/bsmp-website/src/layouts/ArticleTopLayout.astro", void 0);
 
 const $$Astro = createAstro("https://astro-sphere-demo.vercel.app");
 const $$ArticleBottomLayout = createComponent(async ($$result, $$props, $$slots) => {
@@ -36,6 +36,6 @@ Prev
 </div> </div> <div class="font-semibold mt-3 text-black dark:text-white"> ${prev.data.title} </div> </div> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="order-1 stroke-current group-hover:stroke-black group-hover:dark:stroke-white rotate-180"> <line x1="5" y1="12" x2="19" y2="12" class="scale-x-0 group-hover:scale-x-100 translate-x-4 group-hover:translate-x-1 transition-all duration-300 ease-in-out"></line> <polyline points="12 5 19 12 12 19" class="translate-x-0 group-hover:translate-x-1 transition-all duration-300 ease-in-out"></polyline> </svg> </a> <a${addAttribute(`/${next.collection}/${next.slug}`, "href")} class="group p-4 gap-3 flex items-center border rounded-lg hover:bg-black/5 hover:dark:bg-white/10 border-black/15 dark:border-white/20 transition-colors duration-300 ease-in-out"> <div class="w-full h-full text-right group-hover:text-black group-hover:dark:text-white blend"> <div class="text-sm uppercase">
 Next
 </div> <div class="font-semibold mt-3 text-black dark:text-white"> ${next.data.title} </div> </div> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="stroke-current group-hover:stroke-black group-hover:dark:stroke-white"> <line x1="5" y1="12" x2="19" y2="12" class="scale-x-0 group-hover:scale-x-100 translate-x-4 group-hover:translate-x-1 transition-all duration-300 ease-in-out"></line> <polyline points="12 5 19 12 12 19" class="translate-x-0 group-hover:translate-x-1 transition-all duration-300 ease-in-out"></polyline> </svg> </a> </div> </div>`;
-}, "/Users/bobstoute/Git/@bsmp/astro-sphere/src/layouts/ArticleBottomLayout.astro", void 0);
+}, "/Users/bobstoute/Git/@bsmp/bsmp-website/src/layouts/ArticleBottomLayout.astro", void 0);
 
 export { $$ArticleTopLayout as $, $$ArticleBottomLayout as a };

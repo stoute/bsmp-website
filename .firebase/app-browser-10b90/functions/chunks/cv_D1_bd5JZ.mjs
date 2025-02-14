@@ -1,5 +1,5 @@
 async function getMod() {
-						return import('./cv_CPa-pSaB.mjs');
+						return import('./cv_BmEsPVM7.mjs');
 					}
 					const collectedLinks = [];
 					const collectedStyles = [];

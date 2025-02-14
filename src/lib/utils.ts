@@ -1,5 +1,6 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
+import type { Links } from "@types";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -18,6 +19,22 @@ export function readingTime(html: string) {
   const wordCount = textOnly.split(/\s+/).length;
   const readingTimeMinutes = (wordCount / 200 + 1).toFixed();
   return `${readingTimeMinutes} min read`;
+}
+
+export function parseLinks(links: Links[]): Links[] {
+  console.log("NODE_ENV=" + import.meta.env.NODE_ENV);
+  let arr: Links = [];
+  links.map((link) => {
+    // @ts-ignore
+    if (import.meta.env.NODE_ENV === "production" && !link["DISABLED"]) {
+      // @ts-ignore
+      arr.push(link);
+    } else {
+      // @ts-ignore
+      arr.push(link);
+    }
+  });
+  return arr;
 }
 
 export function isRunningOnLocalhost(): boolean {

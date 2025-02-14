@@ -1,5 +1,21 @@
 import defaultTheme from "tailwindcss/defaultTheme";
 
+const round = (num) =>
+  num
+    .toFixed(7)
+    .replace(/(\.[0-9]+?)0+$/, "$1")
+    .replace(/\.0$/, "");
+const rem = (px) => `${round(px / 16)}rem`;
+const em = (px, base) => `${round(px / base)}em`;
+const hexToRgb = (hex) => {
+  hex = hex.replace("#", "");
+  hex = hex.length === 3 ? hex.replace(/./g, "$&$&") : hex;
+  const r = parseInt(hex.substring(0, 2), 16);
+  const g = parseInt(hex.substring(2, 4), 16);
+  const b = parseInt(hex.substring(4, 6), 16);
+  return `${r} ${g} ${b}`;
+};
+
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: ["class"],
@@ -17,30 +33,209 @@ export default {
       typography: {
         DEFAULT: {
           // this is for prose class
-          css: {
-            maxWidth: "full",
-            // color: theme('colors.yourSpecificColor'), // change global color scheme
-            p: {
-              // fontSize: "14px", // key can be in camelCase...
-              // "text-align": "center", // or as it is in css (but in quotes).
-            },
-            a: {
-              // change anchor color and on hover
-              color: "#03989E",
-              "&:hover": {
-                // could be any. It's like extending css selector
-                color: "#F7941E",
+          css: [
+            {
+              fontSize: rem(16),
+              lineHeight: round(28 / 16),
+              p: {
+                marginTop: em(20, 16),
+                marginBottom: em(20, 16),
+              },
+              '[class~="lead"]': {
+                fontSize: em(20, 16),
+                lineHeight: round(32 / 20),
+                marginTop: em(24, 20),
+                marginBottom: em(24, 20),
+              },
+              blockquote: {
+                marginTop: em(32, 20),
+                marginBottom: em(32, 20),
+                paddingInlineStart: em(20, 20),
+              },
+              h1: {
+                fontSize: em(36, 16),
+                marginTop: "0",
+                marginBottom: em(32, 36),
+                lineHeight: round(40 / 36),
+              },
+              h2: {
+                fontSize: em(24, 16),
+                marginTop: em(48, 24),
+                marginBottom: em(24, 24),
+                lineHeight: round(32 / 24),
+              },
+              h3: {
+                fontSize: em(20, 16),
+                marginTop: em(32, 20),
+                marginBottom: em(12, 20),
+                lineHeight: round(32 / 20),
+              },
+              h4: {
+                marginTop: em(24, 16),
+                marginBottom: em(8, 16),
+                lineHeight: round(24 / 16),
+              },
+              img: {
+                marginTop: em(32, 16),
+                marginBottom: em(32, 16),
+              },
+              picture: {
+                marginTop: em(32, 16),
+                marginBottom: em(32, 16),
+              },
+              "picture > img": {
+                marginTop: "0",
+                marginBottom: "0",
+              },
+              video: {
+                marginTop: em(32, 16),
+                marginBottom: em(32, 16),
+              },
+              kbd: {
+                fontSize: em(14, 16),
+                borderRadius: rem(5),
+                paddingTop: em(3, 16),
+                paddingInlineEnd: em(6, 16),
+                paddingBottom: em(3, 16),
+                paddingInlineStart: em(6, 16),
+              },
+              code: {
+                fontSize: em(14, 16),
+              },
+              "h2 code": {
+                fontSize: em(21, 24),
+              },
+              "h3 code": {
+                fontSize: em(18, 20),
+              },
+              pre: {
+                fontSize: em(14, 16),
+                lineHeight: round(24 / 14),
+                marginTop: em(24, 14),
+                marginBottom: em(24, 14),
+                borderRadius: rem(6),
+                paddingTop: em(12, 14),
+                paddingInlineEnd: em(16, 14),
+                paddingBottom: em(12, 14),
+                paddingInlineStart: em(16, 14),
+              },
+              ol: {
+                marginTop: em(20, 16),
+                marginBottom: em(20, 16),
+                paddingInlineStart: em(26, 16),
+              },
+              ul: {
+                marginTop: em(20, 16),
+                marginBottom: em(20, 16),
+                paddingInlineStart: em(26, 16),
+              },
+              li: {
+                marginTop: em(8, 16),
+                marginBottom: em(8, 16),
+              },
+              "ol > li": {
+                paddingInlineStart: em(6, 16),
+              },
+              "ul > li": {
+                paddingInlineStart: em(6, 16),
+              },
+              "> ul > li p": {
+                marginTop: em(12, 16),
+                marginBottom: em(12, 16),
+              },
+              "> ul > li > p:first-child": {
+                marginTop: em(20, 16),
+              },
+              "> ul > li > p:last-child": {
+                marginBottom: em(20, 16),
+              },
+              "> ol > li > p:first-child": {
+                marginTop: em(20, 16),
+              },
+              "> ol > li > p:last-child": {
+                marginBottom: em(20, 16),
+              },
+              "ul ul, ul ol, ol ul, ol ol": {
+                marginTop: em(12, 16),
+                marginBottom: em(12, 16),
+              },
+              dl: {
+                marginTop: em(20, 16),
+                marginBottom: em(20, 16),
+              },
+              dt: {
+                marginTop: em(20, 16),
+              },
+              dd: {
+                marginTop: em(8, 16),
+                paddingInlineStart: em(26, 16),
+              },
+              hr: {
+                marginTop: em(48, 16),
+                marginBottom: em(48, 16),
+              },
+              "hr + *": {
+                marginTop: "0",
+              },
+              "h2 + *": {
+                marginTop: "0",
+              },
+              "h3 + *": {
+                marginTop: "0",
+              },
+              "h4 + *": {
+                marginTop: "0",
+              },
+              table: {
+                fontSize: em(14, 16),
+                lineHeight: round(24 / 14),
+              },
+              "thead th": {
+                paddingInlineEnd: em(8, 14),
+                paddingBottom: em(8, 14),
+                paddingInlineStart: em(8, 14),
+              },
+              "thead th:first-child": {
+                paddingInlineStart: "0",
+              },
+              "thead th:last-child": {
+                paddingInlineEnd: "0",
+              },
+              "tbody td, tfoot td": {
+                paddingTop: em(8, 14),
+                paddingInlineEnd: em(8, 14),
+                paddingBottom: em(8, 14),
+                paddingInlineStart: em(8, 14),
+              },
+              "tbody td:first-child, tfoot td:first-child": {
+                paddingInlineStart: "0",
+              },
+              "tbody td:last-child, tfoot td:last-child": {
+                paddingInlineEnd: "0",
+              },
+              figure: {
+                marginTop: em(32, 16),
+                marginBottom: em(32, 16),
+              },
+              "figure > *": {
+                marginTop: "0",
+                marginBottom: "0",
+              },
+              figcaption: {
+                fontSize: em(14, 16),
+                lineHeight: round(20 / 14),
+                marginTop: em(12, 14),
               },
             },
-            ul: {
-              "> li": {
-                "&::before": {
-                  // more complex example - add before to an li element.
-                  content: "",
-                },
+            {
+              "> :first-child": {
+                marginTop: "0",
+              },
+              "> :last-child": {
+                marginBottom: "0",
               },
             },
-          },
+          ],
         },
         sm: {
           // and this is for prose-sm.
