@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://localhost:4321/sitemap-index.xml
+Sitemap: https://app-browser-10b90.firebaseapp.com/sitemap-index.xml
