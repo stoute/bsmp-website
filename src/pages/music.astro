@@ -4,23 +4,19 @@ import PageLayout from "@layouts/PageLayout.astro";
 import TopLayout from "@layouts/TopLayout.astro";
 import BottomLayout from "@layouts/BottomLayout.astro";
 import Search from "@components/Search";
-// import Cv from "./music.js";
 import { SEARCH } from "@consts";
 ---
 
-<PageLayout title={SEARCH.TITLE} description={SEARCH.DESCRIPTION}>
+<PageLayout title={'music'} description={'music'}>
     <div class="bg-subwayDark background-image ">
-
-    <BottomLayout>
         <style>
-            .music {
-                iframe {
-                    margin-bottom: 1em;
-                }
+            .music iframe{
+                margin-bottom: 1em;
             }
         </style>
-        <article class="music animate prose dark:prose-invert mt-10">
-            <div class="text-center font-bold">
+        <div class="animate h-full text-center flex justify-center">
+        <article class="music animate prose dark:prose-invert mt-10 align-middle">
+            <div class="font-bold"></div>
                 <br>
                 <div class="">
                     SOME COMPILATIONS OF MY MUSIC
@@ -84,5 +80,7 @@ import { SEARCH } from "@consts";
             </div>
 
         </article>
-    </BottomLayout>
+        </div>
+    </div>
+
 </PageLayout>

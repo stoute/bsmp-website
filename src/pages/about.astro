@@ -6,10 +6,6 @@ import BottomLayout from "@layouts/BottomLayout.astro";
 import { SEARCH } from "@consts";
 import AboutSvg from "@images/about.svg";
 
-const projects = (await getCollection("projects")).filter(
-  (post) => !post.data.draft
-);
-
 ---
 
 <PageLayout title={SEARCH.TITLE} description={SEARCH.DESCRIPTION}>
