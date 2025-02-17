@@ -1785,11 +1785,12 @@ const SvgContact = props => (
           </tspan>
         </text>
         <text
-          fontFamily="OpenSans-Regular, Open Sans"
+          fontFamily="OpenSansRoman-Bold, Open Sans"
           fontSize={16}
+          fontWeight="bold"
           fill="#FFF"
         >
-          <tspan x={103.164} y={354}>
+          <tspan x={101.738} y={354}>
             {`BOB STOUTE`}
           </tspan>
         </text>

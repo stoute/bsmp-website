@@ -4,7 +4,7 @@ import { cn, isRunningOnLocalhost } from "@lib/utils"
 const { pathname } = Astro.url
 const subpath = pathname.match(/[^/]+/g)
 
-const EMAIL: unknown = SOCIALS.find(SOCIAL => SOCIAL.NAME === "Email")
+const EMAIL: any = SOCIALS.find(SOCIAL => SOCIAL.NAME === "Email")
 ---
 
 <div id="drawer" class="fixed inset-0 h-0 z-40 overflow-hidden flex flex-col items-center justify-center md:hidden bg-neutral-100 dark:bg-neutral-900 transition-[height] duration-300 ease-in-out">
@@ -23,9 +23,9 @@ const EMAIL: unknown = SOCIALS.find(SOCIAL => SOCIAL.NAME === "Email")
         href={EMAIL.HREF}
         target="_blank"
         aria-label={`${SITE.TITLE} on ${EMAIL.NAME}`}
-        class="group size-10 rounded-full p-2 items-center justify-center hover:bg-black/5 dark:bg-white/20  blend"
+        class="md:flex group rounded-full p-[0.8rem] items-center justify-center hover:bg-black/5 dark:bg-white/20  blend"
     >
-      <svg class="scale-90 fill-current group-hover:fill-black group-hover:dark:fill-white blend">
+      <svg class="w-7 h-7 fill-current group-hover:fill-black group-hover:dark:fill-white blend">
         <use href={`/social.svg#${EMAIL.ICON}`} />
       </svg>
     </a>

@@ -476,8 +476,8 @@
             <text id="CONTACT" font-family="OpenSansRoman-Bold, Open Sans" font-size="23" font-weight="bold" fill="#FFFFFF">
                 <tspan x="97.4145378" y="73">CONTACT</tspan>
             </text>
-            <text id="BOB-STOUTE" font-family="OpenSans-Regular, Open Sans" font-size="16" font-weight="normal" fill="#FFFFFF">
-                <tspan x="103.164062" y="354">BOB STOUTE</tspan>
+            <text id="BOB-STOUTE" font-family="OpenSansRoman-Bold, Open Sans" font-size="16" font-weight="bold" fill="#FFFFFF">
+                <tspan x="101.738281" y="354">BOB STOUTE</tspan>
             </text>
             <text id="rotterdam-the-nether" font-family="OpenSansRoman-Bold, Open Sans" font-size="16" font-weight="bold" fill="#FFFFFF">
                 <tspan x="110.859375" y="444">rotterdam</tspan>

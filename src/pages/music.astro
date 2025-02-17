@@ -1,28 +1,29 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
 import PageLayout from "@layouts/PageLayout.astro";
-import TopLayout from "@layouts/TopLayout.astro";
-import BottomLayout from "@layouts/BottomLayout.astro";
-import Search from "@components/Search";
-import { SEARCH } from "@consts";
 ---
 
 <PageLayout title={'music'} description={'music'}>
+    <style is:global>
+        .music article{
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 2.5em 2.25em;;
+            text-align: center;
+            font-weight: bold;
+        }
+        .music article iframe{
+            margin-bottom: 1em;
+        }
+    </style>
     <div class="bg-subwayDark background-image ">
-        <style>
-            .music iframe{
-                margin-bottom: 1em;
-            }
-        </style>
         <div class="animate h-full text-center flex justify-center">
-        <article class="music animate prose dark:prose-invert mt-10 align-middle">
-            <div class="font-bold"></div>
+        <article class="animate mt-10 align-middle">
                 <br>
                 <div class="">
-                    SOME COMPILATIONS OF MY MUSIC
+                    SOME SAMPLES OF MY MUSIC
                     <br>• 1990 / 2025 •
                 </div>
-                <img src="/brand.svg"/>
+                <img class="scale-90" src="/images/headphone-icon.svg"/>
                 Vintage Techno - Stoute & Alakhov - 1994 / 2020
                 <iframe
                         width="100%"

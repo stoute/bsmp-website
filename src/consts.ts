@@ -2,8 +2,8 @@ import type { Site, Page, Links, Socials } from "@types";
 
 // Global
 export const SITE: Site = {
-  TITLE: "BSMP",
-  DESCRIPTION: "Bob Stoute - Media Programming.",
+  TITLE: "BS",
+  DESCRIPTION: "Bob Stoute - Media Programming",
   AUTHOR: "Bob Stoute",
 };
 
