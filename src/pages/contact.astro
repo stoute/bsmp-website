@@ -7,6 +7,13 @@ import { SITE, SOCIALS } from "@consts";
 import ContactSvg from "@images/contact.svg";
 ---
 
+<style is:global>
+  .contact footer, .contact section  {
+    @apply hidden;
+  }
+</style>
+
+
 <PageLayout title={"contact"} description={"contact"}>
   <div class="bg-subwayDark background-image ">
     <div class="animate absolute h-screen w-full flex-col flex items-center justify-center">

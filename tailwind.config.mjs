@@ -120,19 +120,20 @@ export default {
                 paddingInlineStart: em(16, 14),
               },
               ol: {
-                marginTop: em(20, 16),
-                marginBottom: em(20, 16),
-                paddingInlineStart: em(26, 16),
+                marginTop: em(10, 16),
+                marginBottom: em(10, 16),
+                paddingInlineStart: em(13, 16),
               },
               ul: {
-                marginTop: em(20, 16),
-                marginBottom: em(20, 16),
-                paddingInlineStart: em(26, 16),
+                marginTop: em(10, 16),
+                marginBottom: em(10, 16),
+                paddingInlineStart: em(18, 16),
               },
               li: {
-                marginTop: em(8, 16),
-                marginBottom: em(8, 16),
+                marginTop: em(4, 16),
+                marginBottom: em(4, 16),
               },
+
               "ol > li": {
                 paddingInlineStart: em(6, 16),
               },

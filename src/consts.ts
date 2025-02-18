@@ -9,7 +9,7 @@ export const SITE: Site = {
 
 // Work Page
 export const WORK: Page = {
-  TITLE: "Work",
+  TITLE: "Work History",
   DESCRIPTION: "Places I have worked.",
 };
 
@@ -22,7 +22,7 @@ export const BLOG: Page = {
 // Projects Page
 export const PROJECTS: Page = {
   TITLE: "Projects",
-  DESCRIPTION: "Recent projects I have worked on.",
+  DESCRIPTION: "Some projects I have worked on.",
 };
 
 // Search Page
@@ -42,6 +42,10 @@ export const LINKS: Links = [
     HREF: "/about",
   },
   {
+    TEXT: "Work",
+    HREF: "/work",
+  },
+  {
     TEXT: "Contact",
     HREF: "/contact",
   },
@@ -50,18 +54,13 @@ export const LINKS: Links = [
     HREF: "/music",
   },
   {
-    TEXT: "Work",
-    HREF: "/work",
+    TEXT: "Projects",
+    HREF: "/projects",
     DISABLED: true,
   },
   {
     TEXT: "Blog",
     HREF: "/blog",
-    DISABLED: true,
-  },
-  {
-    TEXT: "Projects",
-    HREF: "/projects",
     DISABLED: true,
   },
 ];

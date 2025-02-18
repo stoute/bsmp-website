@@ -56,11 +56,6 @@ body {
   @apply relative flex flex-col;
 }
 
-/*custom  page styling by path*/
-body.contact footer, body.contact section  {
-  @apply hidden;
-}
-
 .background-image {
   @apply h-screen bg-cover bg-center bg-no-repeat bg-opacity-60 overflow-y-scroll;
 }
@@ -90,7 +85,7 @@ section {
 
 /*prose class */
 article {
-  @apply prose dark:prose-invert max-w-full pb-12 ;
+  @apply prose dark:prose-invert max-w-full pb-6 ;
 }
 
 .page-heading {
