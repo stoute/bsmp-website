@@ -35,25 +35,59 @@ function formatWorkDate(input: Date | string) {
     </div>
   </TopLayout>
   <BottomLayout>
-    <ul>
-      {
-        work.map((entry) => (
-          <li class="animate pb-2 border-b border-black/10 dark:border-white/25 mt-2 py-6 first-of-type:mt-0 first-of-type:pt-0 last-of-type:border-none">
-            <div class="text-sm uppercase mb-2">
-              {formatWorkDate(entry.data.dateStart)} - {formatWorkDate(entry.data.dateEnd)}
+
+    <!-- component -->
+    <section class="relative flex flex-col justify-center  overflow-hidden antialiased">
+            <!-- Vertical Timeline -->
+            <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:ml-[8.75rem] md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
+              {
+                work.map((entry, index) => (
+                    <div class="relative">
+                      <div class="md:flex items-center md:space-x-4 mb-3">
+                        <div class="flex items-center space-x-4 md:space-x-2 md:space-x-reverse">
+                          <!-- Icon -->
+                          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-[#303030] shadow md:order-1">
+                            <svg class="fill-red-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                              <path d="M8 0a8 8 0 1 0 8 8 8.009 8.009 0 0 0-8-8Zm0 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z" />
+                            </svg>
+                          </div>
+                          <!-- Date -->
+                          <time class="text-sm font-medium text-blue-50 md:w-28"> {formatWorkDate(entry.data.dateStart)} - {formatWorkDate(entry.data.dateEnd)}</time>
+                        </div>
+                        <!-- Title -->
+                        <div class="text-slate-500 ml-14"><span class="text-slate-100 font-bold mr-2">{entry.data.company}</span> {entry.data.role}</div>
+                      </div>
+                      <!-- Card -->
+                      <div class="rounded text-slate-100 shadow ml-14 md:ml-44">
+                        <article class="prose dark:prose-invert">
+                          <entry.Content />
+                        </article>                      </div>
+                    </div>
+                ))
+              }
             </div>
-            <div class="text-black dark:text-white font-semibold mb-2">
-              {entry.data.company}
-            </div>
-            <div class="text-sm font-semibold mb-2">
-              {entry.data.role}
-            </div>
-            <article class="prose dark:prose-invert">
-              <entry.Content />
-            </article>
-          </li>
-        ))
-      }
-    </ul>
+    </section>
+
+    <!--<ul>-->
+    <!--  {-->
+    <!--    work.map((entry, index) => (-->
+    <!--      <li class="animate pb-2 border-b border-black/10 dark:border-white/25 mt-2 py-6 first-of-type:mt-0 first-of-type:pt-0 last-of-type:border-none">-->
+    <!--        <div class="text-sm uppercase mb-2">-->
+    <!--          {formatWorkDate(entry.data.dateStart)} - {formatWorkDate(entry.data.dateEnd)}-->
+    <!--        </div>-->
+    <!--        <div class="text-black dark:text-white font-semibold mb-2">-->
+    <!--          {entry.data.company}-->
+    <!--        </div>-->
+    <!--        <div class="text-sm font-semibold mb-2">-->
+    <!--          {entry.data.role}-->
+    <!--        </div>-->
+    <!--        <article class="prose dark:prose-invert">-->
+    <!--          <entry.Content />-->
+    <!--        </article>-->
+    <!--      </li>-->
+    <!--    ))-->
+    <!--  }-->
+    <!--</ul>-->
+
   </BottomLayout>
 </PageLayout>
