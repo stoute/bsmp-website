@@ -37,7 +37,7 @@ function formatWorkDate(input: Date | string) {
   <BottomLayout>
 
     <!-- component -->
-    <section class="relative flex flex-col justify-center  overflow-hidden antialiased">
+    <section class="animate relative flex flex-col justify-center  overflow-hidden antialiased">
             <!-- Vertical Timeline -->
             <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:ml-[8.75rem] md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-slate-600 before:via-slate-400 before:to-transparent">
               {
@@ -52,7 +52,7 @@ function formatWorkDate(input: Date | string) {
                             </svg>
                           </div>
                           <!-- Date -->
-                          <time class="text-sm font-medium text-blue-50 md:w-28"> {formatWorkDate(entry.data.dateStart)} - {formatWorkDate(entry.data.dateEnd)}</time>
+                          <time class="text-sm font-medium text-blue-50 md:w-28">{formatWorkDate(entry.data.dateStart)} - {formatWorkDate(entry.data.dateEnd)}</time>
                         </div>
                         <!-- Title -->
                         <div class="text-slate-500  font-bold"><span class="text-slate-100 font-bold mr-3">{entry.data.company}</span>{entry.data.role}</div>

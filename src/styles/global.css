@@ -79,6 +79,10 @@ header.scrolled {
   @apply backdrop-blur-sm saturate-200;
 }
 
+.page-heading {
+  @apply text-center;
+}
+
 section {
   /*@apply bg-transparent !important;*/
 }

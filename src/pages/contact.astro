@@ -1,18 +1,21 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
 import PageLayout from "@layouts/PageLayout.astro";
-import TopLayout from "@layouts/TopLayout.astro";
-import BottomLayout from "@layouts/BottomLayout.astro";
 import { SITE, SOCIALS } from "@consts";
 import ContactSvg from "@images/contact.svg";
+
+const mailHref = SOCIALS[0].HREF;
 ---
 
 <style is:global>
   .contact footer, .contact section  {
     @apply hidden;
   }
+  .contact svg #email-btn {
+      text-decoration: underline;
+      cursor: pointer;
+    }
 </style>
-
 
 <PageLayout title={"contact"} description={"contact"}>
   <div class="bg-subwayDark background-image ">
@@ -35,7 +38,19 @@ import ContactSvg from "@images/contact.svg";
           ))
         }
         </div>
+        <div class="border-white border-2 text-bold  p-2 mt-2" id="email-btn">CV</div>
       </div>
     </div>
-
 </PageLayout>
+
+<script define:vars={{ mailHref }}>
+  document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('email-btn');
+    if (button) {
+      button.addEventListener('click', () => {
+        const mailtoLink = `${mailHref}?subject=${encodeURIComponent('')}&body=${encodeURIComponent('')}`;
+        window.open(mailtoLink, "_blank");
+      });
+    }
+  });
+</script>
