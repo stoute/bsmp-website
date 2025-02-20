@@ -21,7 +21,7 @@ export function readingTime(html: string) {
   return `${readingTimeMinutes} min read`;
 }
 
-export function parseLinks(links: Links[], environment: string): Links[] {
+export function parseLinks(links: Links, environment: string): Links[] {
   let arr: Links = [];
   links.map((link) => {
     if (environment === "production" && link["DISABLED"] === "production") {

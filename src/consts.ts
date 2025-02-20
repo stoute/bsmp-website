@@ -2,7 +2,7 @@ import type { Site, Page, Links, Socials } from "@types";
 
 // Global
 export const SITE: Site = {
-  TITLE: "BS",
+  TITLE: "BSMP",
   DESCRIPTION: "Bob Stoute - Media Programming",
   AUTHOR: "Bob Stoute",
 };

@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://app-browser-10b90.firebaseapp.com/sitemap-index.xml

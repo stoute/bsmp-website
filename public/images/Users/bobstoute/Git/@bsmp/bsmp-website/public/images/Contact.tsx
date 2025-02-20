@@ -2,13 +2,13 @@ import React from "react";
 
 const SvgContact = props => (
   <svg
-    width={182}
-    height={467}
+    width={144}
+    height={432}
     xmlnsXlink="http://www.w3.org/1999/xlink"
     {...props}
   >
     <g fill="none" fillRule="evenodd">
-      <g transform="translate(-61 -1)">
+      <g transform="translate(-80 -1)">
         <image
           x={135.447}
           width={32.106}
@@ -1800,20 +1800,11 @@ const SvgContact = props => (
           fontWeight="bold"
           fill="#FFF"
         >
-          <tspan x={110.859} y={445}>
+          <tspan x={110.859} y={410}>
             {`rotterdam`}
           </tspan>
-          <tspan x={88.32} y={467}>
+          <tspan x={88.32} y={432}>
             {`the netherlands`}
-          </tspan>
-        </text>
-        <text
-          fontFamily="OpenSans-Regular, Open Sans"
-          fontSize={16}
-          fill="#FFF"
-        >
-          <tspan x={66.512} y={409}>
-            {`stoute.bob@gmail.com`}
           </tspan>
         </text>
       </g>
@@ -1823,8 +1814,8 @@ const SvgContact = props => (
         strokeLinejoin="round"
         strokeWidth={2}
       >
-        <path d="M75 362a16 16 0 0 0 32 0c0-8.837-7.163-16-16-16s-16 7.163-16 16m1.067-5.333h29.866m-29.866 10.666h29.866" />
-        <path d="M90.607 346a30.09 30.09 0 0 0 0 32m1.786-32a30.09 30.09 0 0 1 0 32" />
+        <path d="M56 362a16 16 0 0 0 32 0c0-8.837-7.163-16-16-16s-16 7.163-16 16m1.067-5.333h29.866m-29.866 10.666h29.866" />
+        <path d="M71.607 346a30.09 30.09 0 0 0 0 32m1.786-32a30.09 30.09 0 0 1 0 32" />
       </g>
     </g>
   </svg>

@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "app-browser-10b90"
-  }
+    "default": "bob-stoute"
+  },
+  "targets": {},
+  "etags": {}
 }
