@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="182px" height="467px" viewBox="0 0 182 467" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="144px" height="432px" viewBox="0 0 144 432" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>contact</title>
     <g id="contact" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="section-contact" transform="translate(-61.000000, -1.000000)">
+        <g id="section-contact" transform="translate(-80.000000, -1.000000)">
             <image id="Bitmap" x="135.44702" y="0" width="32.1059603" height="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGOfPtRkwAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAABq0lEQVRYCdVWi3GDMAwNnSAjMAIjsEG7Qdmg2aQzdIRM4GxANukI9D1qgWOMZYxJr7rTyej3JBl0nE7/mYZhOJOf2gMAO7AB+2Sg6A4rBslrcA/WiD510UKYEPytITt2+pYrAslSOnfwx2NfZApIxTvPpU4r4kVzgP09wWfNRY2t1iJFz9blnCMrUCwuOgFgH/6NRwuIVZ5qQxN1zDc6Hgb+6RXYym9W5gg1NuUKvnKQbcye2BkW15CziHh7Qoy/gPNeagRuXcUC7Euu6Le5tQ0nW0TKJAx82W1rmWcDdqnbAP3oiixczcbNZs/srn30np9oA9NHKG8SkhJZ+DMiCSkbsVEKiqdrvJi8d8ICfAoIZOsCWftoDug5CaHLaMcT70m6EWOqND6I9ozExibvOSqC76HfLjRUxw6wCZOL6MOx5RzvoSDpKGSDbophAfWK01PUKatYK6TRHAL2KaZEAa8BAE01x8hd7ZStjyj5Anr3MxymhSEBmTJnEY1QpQpgMhaxmIRMgDbrAzFTxaM4FZI35LmC5VPjC8c7b8ELOqKABUhMUeIriOVXbT+5200J/TPhEQAAAABJRU5ErkJggg=="></image>
             <g id="Group" transform="translate(80.258278, 80.000000)">
                 <g transform="translate(1.003311, 0.000000)" id="Page-1">
@@ -480,14 +480,11 @@
                 <tspan x="101.738281" y="329">BOB STOUTE</tspan>
             </text>
             <text id="rotterdam-the-nether" font-family="OpenSansRoman-Bold, Open Sans" font-size="16" font-weight="bold" fill="#FFFFFF">
-                <tspan x="110.859375" y="445">rotterdam</tspan>
-                <tspan x="88.3203125" y="467">the netherlands</tspan>
-            </text>
-            <text id="email-btn" font-family="OpenSans-Regular, Open Sans" font-size="16" font-weight="normal" fill="#FFFFFF">
-                <tspan x="66.5117188" y="409">stoute.bob@gmail.com</tspan>
+                <tspan x="110.859375" y="410">rotterdam</tspan>
+                <tspan x="88.3203125" y="432">the netherlands</tspan>
             </text>
         </g>
-        <g id="Group" transform="translate(75.000000, 346.000000)" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        <g id="Group" transform="translate(56.000000, 346.000000)" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
             <path d="M0,16 C0,21.7162492 3.04958267,26.9982816 8,29.8564064 C12.9504172,32.7145312 19.0495828,32.7145312 24,29.8564064 C28.9504173,26.9982816 32,21.7162492 32,16 C32,7.16344382 24.8365559,0 16,0 C7.16344413,0 0,7.16344382 0,16 M1.06666667,10.6666664 L30.9333333,10.6666664 M1.06666667,21.3333331 L30.9333333,21.3333331" id="Shape"></path>
             <path d="M15.6065032,0 C9.46449894,9.79160144 9.46449894,22.2083986 15.6065032,32 M17.3934968,0 C23.5355011,9.79160144 23.5355011,22.2083986 17.3934968,32" id="Shape"></path>
         </g>
