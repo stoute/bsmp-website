@@ -5,6 +5,7 @@ import { SITE, SOCIALS } from "@consts";
 import ContactSvg from "@images/contact.svg";
 
 const mailHref = SOCIALS[0].HREF;
+const cvRef = 'cv-bobstoute.pdf';
 ---
 
 <style is:global>
@@ -38,12 +39,14 @@ const mailHref = SOCIALS[0].HREF;
           ))
         }
         </div>
-        <div class="border-white border-2 text-bold  p-2 mt-2" id="email-btn">CV</div>
+        <div class="border-[#DDD] border-2 rounded-2xl text-bold text-sm py-2 px-4 mt-2" id="email-btn">
+          <a href={cvRef} target="_blank">download cv</a>
+        </div>
       </div>
     </div>
 </PageLayout>
 
-<script define:vars={{ mailHref }}>
+<script define:vars={{ mailHref, cvRef }}>
   document.addEventListener('DOMContentLoaded', () => {
     const button = document.getElementById('email-btn');
     if (button) {

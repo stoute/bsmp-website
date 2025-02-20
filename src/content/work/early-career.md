@@ -1,6 +1,6 @@
 ---
-company: "Various Clients"
-role: "Early Career (Pre-2006)"
+company: "Early Career (Pre-2006)"
+role: ""
 dateStart: "1990"
 dateEnd: "2006"
 ---

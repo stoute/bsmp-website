@@ -10,13 +10,13 @@ export interface Site extends Page {
 export type Link = {
   TEXT: string;
   HREF: string;
-  DISABLED?: boolean;
+  DISABLED?: string;
 };
 
 export type Links = {
   TEXT: string;
   HREF: string;
-  DISABLED?: boolean;
+  DISABLED?: string;
 }[];
 
 export type Social = {

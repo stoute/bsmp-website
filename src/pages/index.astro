@@ -26,7 +26,7 @@ const projects = (await getCollection("projects"))
   <section class="relative h-screen w-full">
     <div class="animate absolute h-full w-full flex items-center justify-center">
       <div class='relative w-full h-full flex items-center justify-center'>
-        <div class='w-full rounded p-8 border-3 border-solid border-white text-center bg-black bg-opacity-50' >
+        <div class='w-full text-center' >
           <p class='animated text-2xl md:text-2xl lg:text-2xl font-semibold uppercase text-black dark:text-white mb-3 opacity-80'>
             Bob Stoute
           </p>
@@ -36,25 +36,24 @@ const projects = (await getCollection("projects"))
           <p class="flex items-center justify-center mt-5 mb-5">
             <img src='/brand.svg' class='animated  w-18 h-18 '/>
           </p>
-            <p class='text-sm md:text-base  font-semibold uppercase opacity-75'>
-                25 years in front end development
+            <p class='text-sm md:text-base  font-bold uppercase opacity-80 block'>
+                 frontend
             </p>
-            <p class='text-sm md:text-base lg:text-lg opacity-75'>
-              Astro / Firebase / Next / React / Stencil / Tailwind<br/>
+            <p class='text-sm md:text-base lg:text-lg opacity-80'>
+              architecture / design / development / consulting
             </p>
             <!--<div class="flex items-center justify-center mt-5 mb-5">-->
             <!--  <a href="#about"><Icon class="block scale-10 w-20 h-20" name="mdi:arrow-down-bold-circle" /></a>-->
             <!--</div>-->
         </div>
       </div>
-
     </div>
   </section>
   </div>
 
 
-  <section id="about" class="relative bg-white dark:bg-black relative h-screen w-full  text-center">
-    <div class="mx-auto max-w-screen-sm p-5 space-y-24 pb-16">
+  <!--<section id="about" class="relative bg-white dark:bg-black relative h-screen w-full  text-center">-->
+  <!--  <div class="mx-auto max-w-screen-sm p-5 space-y-24 pb-16">-->
 
       <!-- About Section -->
       <!--<section class="animate">-->
@@ -68,28 +67,27 @@ const projects = (await getCollection("projects"))
       <!--</section>-->
 
       <!-- Project Preview Section -->
-      <section class="animate">
-        <div class="space-y-4">
-          <div class="flex justify-between">
-            <p class="font-semibold text-black dark:text-white">
-              Recent projects
-            </p>
-            <a href="/projects" class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
-              <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">
-                All projects
-              </span>
-            </a>
-          </div>
-          <ul class="space-y-4">
-            {projects.map((project) => (
-              <li>
-                <ArrowCard entry={project} />
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
+      <!--<section class="animate">-->
+      <!--  <div class="space-y-4">-->
+      <!--    <div class="flex justify-between">-->
+      <!--      <p class="font-semibold text-black dark:text-white">-->
+      <!--        Recent projects-->
+      <!--      </p>-->
+      <!--      <a href="/projects" class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">-->
+      <!--        <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">-->
+      <!--          All projects-->
+      <!--        </span>-->
+      <!--      </a>-->
+      <!--    </div>-->
+      <!--    <ul class="space-y-4">-->
+      <!--      {projects.map((project) => (-->
+      <!--        <li>-->
+      <!--          <ArrowCard entry={project} />-->
+      <!--        </li>-->
+      <!--      ))}-->
+      <!--    </ul>-->
+      <!--  </div>-->
+      <!--</section>-->
 
       <!-- Blog Preview Section -->
       <!--<section class="animate">-->
@@ -113,8 +111,9 @@ const projects = (await getCollection("projects"))
       <!--    </ul>-->
       <!--  </div>-->
       <!--</section>-->
-    </div>
-  </section>
+
+  <!--  </div>-->
+  <!--</section>-->
 
 
 </PageLayout>

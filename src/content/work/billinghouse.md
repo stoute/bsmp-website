@@ -2,8 +2,8 @@
 company: "BillingHouse B.V."
 role: "Senior Frontend Developer"
 dateStart: "01/01/2018"
-dateEnd: "12/31/2020"
+dateEnd: "01/01/2021"
 ---
-- Architected and implemented React, React Native & Angular applications.
+- Architecture and implementation of React, React Native & Angular applications.
 - Developed a reusable npm web-components library with Stencil.js.
-- Created npm packages to enhance frontend workflow.
+- Created npm javascript packages to enhance frontend workflow.

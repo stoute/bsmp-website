@@ -21,14 +21,11 @@ export function readingTime(html: string) {
   return `${readingTimeMinutes} min read`;
 }
 
-export function parseLinks(links: Links[]): Links[] {
-  console.log("NODE_ENV=" + import.meta.env.NODE_ENV);
+export function parseLinks(links: Links[], environment: string): Links[] {
   let arr: Links = [];
   links.map((link) => {
-    // @ts-ignore
-    if (import.meta.env.NODE_ENV === "production" && !link["DISABLED"]) {
-      // @ts-ignore
-      arr.push(link);
+    if (environment === "production" && link["DISABLED"] === "production") {
+      return;
     } else {
       // @ts-ignore
       arr.push(link);
