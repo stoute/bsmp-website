@@ -1,0 +1,17 @@
+{
+  "name": "public",
+  "version": "1.0.0",
+  "description": "astro client libs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@bsmp/core": "^6.0.0",
+    "@bsmp/webcomponents": "^1.0.47",
+    "@nanostores/persistent": "^0.10.2",
+    "nanostores": "^0.11.4"
+  }
+}

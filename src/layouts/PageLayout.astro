@@ -6,8 +6,11 @@ import Footer from "@components/Footer.astro"
 import Drawer from "@components/Drawer.astro"
 const { title, description } = Astro.props
 import { SITE } from "@consts"
+// import { appState, isLoggedIn } from '../../public/js/appStore';
 
 const urlPath = Astro.url.pathname.split("/").filter(Boolean).join(" ");
+const environment = Astro.url.hostname === "localhost" ? "development" : "production"
+
 ---
 
 <!doctype html>
@@ -23,4 +26,11 @@ const urlPath = Astro.url.pathname.split("/").filter(Boolean).join(" ");
     </main>
     <Footer />
   </body>
+
+  <script define:vars={{ environment }} type="module">
+    import { appState } from '/js/appStore.js';
+    appState.setKey('environment', environment);
+    console.log(appState.get('environment'));
+  </script>
+
 </html>

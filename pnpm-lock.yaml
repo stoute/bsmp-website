@@ -32,6 +32,12 @@ importers:
       '@astrojs/vercel':
         specifier: ^8.0.7
         version: 8.0.7(astro@5.2.6(jiti@1.21.0)(rollup@4.34.6)(typescript@5.4.2)(yaml@2.7.0))(next@15.1.7(@babel/core@7.24.0)(react@19.0.0))(react@19.0.0)(rollup@4.34.6)
+      '@nanostores/persistent':
+        specifier: ^0.10.2
+        version: 0.10.2(nanostores@0.11.4)
+      '@nanostores/react':
+        specifier: ^0.8.4
+        version: 0.8.4(nanostores@0.11.4)(react@19.0.0)
       '@tailwindcss/typography':
         specifier: ^0.5.10
         version: 0.5.10(tailwindcss@3.4.1)
@@ -50,6 +56,12 @@ importers:
       fuse.js:
         specifier: ^7.0.0
         version: 7.0.0
+      nanostores:
+        specifier: ^0.11.4
+        version: 0.11.4
+      react:
+        specifier: ^19.0.0
+        version: 19.0.0
       sharp:
         specifier: ^0.33.2
         version: 0.33.2
@@ -727,6 +739,19 @@ packages:
 
   '@mdx-js/mdx@3.1.0':
     resolution: {integrity: sha512-/QxEhPAvGwbQmy1Px8F899L5Uc2KZ6JtXwlCgJmjSTBedwOZkByYcBG4GceIGPXRDsmfxhHazuS+hlOShRLeDw==}
+
+  '@nanostores/persistent@0.10.2':
+    resolution: {integrity: sha512-BEndnLhRC+yP7gXTESepBbSj8XNl8OXK9hu4xAgKC7MWJHKXnEqJMqY47LUyHxK6vYgFnisyHmqq+vq8AUFyIg==}
+    engines: {node: ^18.0.0 || >=20.0.0}
+    peerDependencies:
+      nanostores: ^0.9.0 || ^0.10.0 || ^0.11.0
+
+  '@nanostores/react@0.8.4':
+    resolution: {integrity: sha512-EciHSzDXg7GmGODjegGG1VldPEinbAK+12/Uz5+MAdHmxf082Rl6eXqKFxAAu4pZAcr5dNTpv6wMfEe7XacjkQ==}
+    engines: {node: ^18.0.0 || >=20.0.0}
+    peerDependencies:
+      nanostores: ^0.9.0 || ^0.10.0 || ^0.11.0
+      react: '>=18.0.0'
 
   '@next/env@15.1.7':
     resolution: {integrity: sha512-d9jnRrkuOH7Mhi+LHav2XW91HOgTAWHxjMPkXMGBc9B2b7614P7kjt8tAplRvJpbSt4nbO1lugcT/kAaWzjlLQ==}
@@ -2319,6 +2344,10 @@ packages:
     resolution: {integrity: sha512-WNLf5Sd8oZxOm+TzppcYk8gVOgP+l58xNy58D0nbUnOxOWRWvlcCV4kUF7ltmI6PsrLl/BgKEyS4mqsGChFN0w==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
+
+  nanostores@0.11.4:
+    resolution: {integrity: sha512-k1oiVNN4hDK8NcNERSZLQiMfRzEGtfnvZvdBvey3SQbgn8Dcrk0h1I6vpxApjb10PFUflZrgJ2WEZyJQ+5v7YQ==}
+    engines: {node: ^18.0.0 || >=20.0.0}
 
   neotraverse@0.6.18:
     resolution: {integrity: sha512-Z4SmBUweYa09+o6pG+eASabEpP6QkQ70yHj351pQoEXIs8uHbaU2DWVmzBANKgflPa47A50PtB2+NgRpQvr7vA==}
@@ -4166,6 +4195,15 @@ snapshots:
     transitivePeerDependencies:
       - acorn
       - supports-color
+
+  '@nanostores/persistent@0.10.2(nanostores@0.11.4)':
+    dependencies:
+      nanostores: 0.11.4
+
+  '@nanostores/react@0.8.4(nanostores@0.11.4)(react@19.0.0)':
+    dependencies:
+      nanostores: 0.11.4
+      react: 19.0.0
 
   '@next/env@15.1.7':
     optional: true
@@ -6178,6 +6216,8 @@ snapshots:
 
   nanoid@3.3.8: {}
 
+  nanostores@0.11.4: {}
+
   neotraverse@0.6.18: {}
 
   next@15.1.7(@babel/core@7.24.0)(react@19.0.0):
@@ -6470,8 +6510,7 @@ snapshots:
 
   range-parser@1.2.1: {}
 
-  react@19.0.0:
-    optional: true
+  react@19.0.0: {}
 
   read-cache@1.0.0:
     dependencies:
