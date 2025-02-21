@@ -5,7 +5,6 @@ import TopLayout from "@layouts/TopLayout.astro"
 import BottomLayout from "@layouts/BottomLayout.astro"
 import AICardGeneration from "@components/kokonutui/ai-card-generation"
 import {ErrorGeneration} from "@components/kokonutui/error-generation"
-import Test from "@components/ui/Test";
 ---
 
 <PageLayout title={'dev'} description={'dev'}>
@@ -13,16 +12,12 @@ import Test from "@components/ui/Test";
   <TopLayout>
     <div class="animate page-heading">
       {'DEV'}
-      <AICardGeneration client:only="react" />
-      <Test client:only="react" >
-      <!--<Test client:load >-->
-        <h4>test child</h4>
-      </Test>
 
       <!--<ErrorGeneration error="error msg" client:only="react" />-->
     </div>
   </TopLayout>
   <BottomLayout>
+    <AICardGeneration client:only="react" />
     <!--<div class="animate">-->
     <!--  <Projects client:load tags={tags} data={projects} />-->
     <!--</div>-->

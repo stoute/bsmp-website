@@ -1,21 +1,25 @@
 ---
-import "@styles/global.css"
-import BaseHead from "@components/BaseHead.astro"
-import Header from "@components/Header.astro"
-import Footer from "@components/Footer.astro"
-import Drawer from "@components/Drawer.astro"
-const { title, description } = Astro.props
-import { SITE } from "@consts"
-// import { appState, isLoggedIn } from '../../public/js/appStore';
+import "@styles/global.css";
+import BaseHead from "@components/BaseHead.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import Drawer from "@components/Drawer.astro";
+const { title, description } = Astro.props;
+import { SITE } from "@consts";
 
 const urlPath = Astro.url.pathname.split("/").filter(Boolean).join(" ");
-const environment = Astro.url.hostname === "localhost" ? "development" : "production"
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <BaseHead title={`${title} | ${SITE.TITLE}`} description={description} />
+    <script>
+      import { appState } from "@lib/appStore";
+      import { isRunningOnLocalhost } from "@lib/utils";
+      const environment = isRunningOnLocalhost() ? "development" : "production";
+      appState.setKey("environment", environment);
+    </script>
   </head>
   <body class:list={urlPath}>
     <Header />
@@ -25,12 +29,4 @@ const environment = Astro.url.hostname === "localhost" ? "development" : "produc
     </main>
     <Footer />
   </body>
-
-  <script>
-    import { appState } from '@lib/appStore';
-    import { isRunningOnLocalhost } from '@lib/utils';
-    const environment = isRunningOnLocalhost() ? "development" : "production"
-    appState.setKey('environment', environment);
-  </script>
-
 </html>

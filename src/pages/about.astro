@@ -1,15 +1,10 @@
 ---
-import { Icon } from 'astro-iconify';
 import { type CollectionEntry, getCollection } from "astro:content";
 import PageLayout from "@layouts/PageLayout.astro";
-import TopLayout from "@layouts/TopLayout.astro";
-import BottomLayout from "@layouts/BottomLayout.astro";
-import { SEARCH } from "@consts";
 import AboutSvg from "@images/about.svg";
-
 ---
 
-<PageLayout title={SEARCH.TITLE} description={SEARCH.DESCRIPTION}>
+<PageLayout title={"About"} description={"Information about Bob Stoute"}>
   <div class="bg-subwayDark background-image">
     <div class="animate h-full text-center flex items-center justify-center">
       <AboutSvg />

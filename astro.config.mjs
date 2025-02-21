@@ -13,6 +13,7 @@ export default defineConfig({
   site: "https://bob-stoute.firebaseapp.com",
   output: "static", // Use 'server' for SSR, 'static' is default - for SSG
   base: "/",
+  // fixme: add node adapter firebase
   // adapter: node({
   //   mode: "middleware"
   // }),

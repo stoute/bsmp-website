@@ -1,20 +1,26 @@
 ---
-import { SITE, LINKS, SOCIALS } from "@consts"
+import { SITE, LINKS, SOCIALS } from "@consts";
 import { cn, parseLinks } from "@lib/utils";
-const { pathname } = Astro.url
-const subpath = pathname.match(/[^/]+/g)
-import Container from "@components/Container.astro"
-import type { Link } from "@types"
+const { pathname } = Astro.url;
+const subpath = pathname.match(/[^/]+/g);
+import Container from "@components/Container.astro";
+import type { Link } from "@types";
 
-const EMAIL: unknown = SOCIALS.find(SOCIAL => SOCIAL.NAME === "Email")
-const environment = Astro.url.hostname === "localhost" ? "development" : "production"
+const EMAIL: unknown = SOCIALS.find((SOCIAL) => SOCIAL.NAME === "Email");
+const environment =
+  Astro.url.hostname === "localhost" ? "development" : "production";
 ---
 
-<header id="header" class="fixed top-0 w-full h-16 z-50 ">
+<header id="header" class="fixed top-0 w-full h-16 z-50">
   <Container size="md">
     <div class="relative h-full w-full">
-      <div class="absolute left-0 top-1/2 -translate-y-1/2 flex gap-1 font-semibold">
-        <a href="/" class="flex gap-1 text-current hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out">
+      <div
+        class="absolute left-0 top-1/2 -translate-y-1/2 flex gap-1 font-semibold"
+      >
+        <a
+          href="/"
+          class="flex gap-1 text-current hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out"
+        >
           <!--<svg class="size-6 fill-current">-->
           <!--  <use href="/brand.svg#brand"></use>-->
           <!--</svg>-->
@@ -29,9 +35,19 @@ const environment = Astro.url.hostname === "localhost" ? "development" : "produc
         <nav class="hidden md:flex items-center justify-center text-sm gap-1">
           {
             parseLinks(LINKS, environment).map((LINK, index) => (
-                <a href={LINKS[index].HREF} class={cn("h-8 rounded-full px-3 text-current", "flex items-center justify-center", "transition-colors duration-300 ease-in-out", pathname === LINK.HREF || "/" + subpath?.[0] === LINK.HREF ? "bg-black dark:bg-white text-white dark:text-black" : "hover:bg-black/5 dark:hover:bg-white/20 hover:text-black dark:hover:text-white")}>
-                  {LINKS[index].TEXT}
-                </a>
+              <a
+                href={LINKS[index].HREF}
+                class={cn(
+                  "h-8 rounded-full px-3 text-current",
+                  "flex items-center justify-center",
+                  "transition-colors duration-300 ease-in-out",
+                  pathname === LINK.HREF || "/" + subpath?.[0] === LINK.HREF
+                    ? "bg-black dark:bg-white text-white dark:text-black"
+                    : "hover:bg-black/5 dark:hover:bg-white/20 hover:text-black dark:hover:text-white",
+                )}
+              >
+                {LINKS[index].TEXT}
+              </a>
             ))
           }
         </nav>
@@ -39,13 +55,15 @@ const environment = Astro.url.hostname === "localhost" ? "development" : "produc
 
       <div class="buttons absolute right-0 top-1/2 -translate-y-1/2 flex gap-1">
         <a
-            href={EMAIL.HREF}
-            target="_blank"
-            aria-label={`${SITE.TITLE} on ${EMAIL.NAME}`}
-            class="hidden md:flex group size-10 rounded-full p-2 items-center justify-center hover:bg-black/5 dark:bg-white/20  blend"
+          href={EMAIL.HREF}
+          target="_blank"
+          aria-label={`${SITE.TITLE} on ${EMAIL.NAME}`}
+          class="hidden md:flex group size-10 rounded-full p-2 items-center justify-center hover:bg-black/5 dark:bg-white/20 blend"
         >
-          <svg class="scale-90 fill-current group-hover:fill-black group-hover:dark:fill-white blend">
-            <use href={`/social.svg#${EMAIL.ICON}`} />
+          <svg
+            class="scale-90 fill-current group-hover:fill-black group-hover:dark:fill-white blend"
+          >
+            <use href={`/social.svg#${EMAIL.ICON}`}></use>
           </svg>
         </a>
 
@@ -70,7 +88,18 @@ const environment = Astro.url.hostname === "localhost" ? "development" : "produc
         <!--  </svg>-->
         <!--</button>-->
 
-        <button id="header-drawer-button" aria-label={`Toggle drawer open and closed`} class={cn("flex md:hidden", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "stroke-current hover:stroke-black hover:dark:stroke-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out")}>
+        <button
+          id="header-drawer-button"
+          aria-label={`Toggle drawer open and closed`}
+          class={cn(
+            "flex md:hidden",
+            "size-9 rounded-full p-2 items-center justify-center",
+            "bg-transparent hover:bg-black/5 dark:hover:bg-white/20",
+            "stroke-current hover:stroke-black hover:dark:stroke-white",
+            "border border-black/10 dark:border-white/25",
+            "transition-colors duration-300 ease-in-out",
+          )}
+        >
           <svg id="drawer-open" class="size-full">
             <use href="/ui.svg#menu"></use>
           </svg>
@@ -103,17 +132,17 @@ const environment = Astro.url.hostname === "localhost" ? "development" : "produc
 
 <script is:inline>
   function toggleDrawer() {
-    const drawer = document.getElementById("drawer")
-    const drawerButton = document.getElementById("header-drawer-button")
-    drawer?.classList.toggle("open")
-    drawerButton?.classList.toggle("open")
+    const drawer = document.getElementById("drawer");
+    const drawerButton = document.getElementById("header-drawer-button");
+    drawer?.classList.toggle("open");
+    drawerButton?.classList.toggle("open");
   }
 
   function initializeDrawerButton() {
-    const drawerButton = document.getElementById("header-drawer-button")
-    drawerButton?.addEventListener("click", toggleDrawer)
+    const drawerButton = document.getElementById("header-drawer-button");
+    drawerButton?.addEventListener("click", toggleDrawer);
   }
 
-  document.addEventListener("astro:after-swap", initializeDrawerButton)
-  initializeDrawerButton()
+  document.addEventListener("astro:after-swap", initializeDrawerButton);
+  initializeDrawerButton();
 </script>
