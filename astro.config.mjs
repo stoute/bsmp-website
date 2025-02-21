@@ -4,6 +4,7 @@ import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import solidJs from "@astrojs/solid-js";
 import icon from "astro-icon";
+import react from "@astrojs/react";
 import node from "@astrojs/node";
 import vercel from "@astrojs/vercel";
 
@@ -19,7 +20,11 @@ export default defineConfig({
   integrations: [
     mdx(),
     sitemap(),
-    solidJs(),
+    react({
+      include: ["**/react/*"],
+      experimentalReactChildren: true,
+    }),
+    // solidJs(),
     tailwind({
       applyBaseStyles: false,
     }),
