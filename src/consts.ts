@@ -63,6 +63,11 @@ export const LINKS: Links = [
     HREF: "/blog",
     DISABLED: "production",
   },
+  {
+    TEXT: "Dev",
+    HREF: "/dev",
+    DISABLED: "production",
+  },
 ];
 
 // Socials
