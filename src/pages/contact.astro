@@ -5,55 +5,62 @@ import { SITE, SOCIALS } from "@consts";
 import ContactSvg from "@images/contact.svg";
 
 const mailHref = SOCIALS[0].HREF;
-const cvRef = 'cv-bobstoute.pdf';
+const cvRef = "cv-bobstoute.pdf";
 ---
 
 <style is:global>
-  .contact footer, .contact section  {
+  .contact footer,
+  .contact section {
     @apply hidden;
   }
   .contact svg #email-btn {
-      text-decoration: underline;
-      cursor: pointer;
-    }
+    text-decoration: underline;
+    cursor: pointer;
+  }
 </style>
 
 <PageLayout title={"contact"} description={"contact"}>
-  <div class="bg-subwayDark background-image ">
-    <div class="animate absolute h-screen w-full flex-col flex items-center justify-center">
+  <div class="background-image bg-subway-dark">
+    <div
+      class="animate absolute h-screen w-full flex-col flex items-center justify-center"
+    >
       <div class="flex flex-wrap gap-1 flex-col items-center justify-center">
-        <ContactSvg class="opacity-90"/>
+        <ContactSvg class="opacity-90" />
         <div class="flex flex-wrap gap-1 pt-2 items-center justify-center">
-        {
-          SOCIALS.map((SOCIAL) => (
+          {
+            SOCIALS.map((SOCIAL) => (
               <a
-                  href={SOCIAL.HREF}
-                  target="_blank"
-                  aria-label={`${SITE.TITLE} on ${SOCIAL.NAME}`}
-                  class="group size-10 rounded-full p-2 items-center justify-center hover:bg-black/5 dark:hover:bg-white/20  blend"
+                href={SOCIAL.HREF}
+                target="_blank"
+                aria-label={`${SITE.TITLE} on ${SOCIAL.NAME}`}
+                class="group size-10 rounded-full p-2 items-center justify-center hover:bg-black/5 dark:hover:bg-white/20  blend"
               >
-                <svg class="size-full fill-current group-hover:fill-black group-hover:dark:fill-white blend">
+                <svg class="size-full fill-current group-hover:fill-black dark:group-hover:fill-white blend">
                   <use href={`/social.svg#${SOCIAL.ICON}`} />
                 </svg>
               </a>
-          ))
-        }
+            ))
+          }
         </div>
-        <div class="border-[#DDD] border-2 rounded-2xl text-bold text-sm py-2 px-4 mt-2" id="email-btn">
+        <div
+          class="border-[#DDD] border-2 rounded-2xl text-bold text-sm py-2 px-4 mt-2"
+          id="email-btn"
+        >
           <a href={cvRef} target="_blank">download cv</a>
         </div>
       </div>
     </div>
-</PageLayout>
+  </div>
 
-<script define:vars={{ mailHref, cvRef }}>
-  document.addEventListener('DOMContentLoaded', () => {
-    const button = document.getElementById('email-btn');
-    if (button) {
-      button.addEventListener('click', () => {
-        const mailtoLink = `${mailHref}?subject=${encodeURIComponent('')}&body=${encodeURIComponent('')}`;
-        window.open(mailtoLink, "_blank");
-      });
-    }
-  });
-</script>
+  <script define:vars={{ mailHref, cvRef }}>
+    document.addEventListener("DOMContentLoaded", () => {
+      const button = document.getElementById("email-btn");
+      if (button) {
+        button.addEventListener("click", () => {
+          const mailtoLink = `${mailHref}?subject=${encodeURIComponent("")}&body=${encodeURIComponent("")}`;
+          window.open(mailtoLink, "_blank");
+        });
+      }
+    });
+  </script>
+</PageLayout>

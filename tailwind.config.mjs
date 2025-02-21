@@ -24,10 +24,9 @@ export default {
     extend: {
       backgroundImage: {
         subway: "url('/images/background_subway.jpg')",
-        subwayDark: "url('/images/background_subway-dark.jpg')",
+        "subway-dark": "url('/images/background_subway-dark.jpg')",
       },
       fontFamily: {
-        // sans: ["Atkinson", ...defaultTheme.fontFamily.sans],
         sans: ["Open Sans", ...defaultTheme.fontFamily.sans],
       },
       typography: {
