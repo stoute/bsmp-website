@@ -1,17 +1,24 @@
 ---
-import { getCollection } from "astro:content"
-import PageLayout from "@layouts/PageLayout.astro"
-import TopLayout from "@layouts/TopLayout.astro"
-import BottomLayout from "@layouts/BottomLayout.astro"
-import AICardGeneration from "@components/kokonutui/ai-card-generation"
-import {ErrorGeneration} from "@components/kokonutui/error-generation"
+import { getCollection } from "astro:content";
+import PageLayout from "@layouts/PageLayout.astro";
+import TopLayout from "@layouts/TopLayout.astro";
+import BottomLayout from "@layouts/BottomLayout.astro";
+import AICardGeneration from "@components/kokonutui/ai-card-generation";
+import { ErrorGeneration } from "@components/kokonutui/error-generation";
+
+import { db, Comment, Author } from "astro:db";
+
+const comments = await db.select().from(Comment);
+const authors = await db.select().from(Author);
+console.log(comments);
+console.log(authors);
 ---
 
-<PageLayout title={'dev'} description={'dev'}>
+<PageLayout title={"dev"} description={"dev"}>
   <!--<div class="bg-subwayDark background-image ">-->
   <TopLayout>
     <div class="animate page-heading">
-      {'DEV'}
+      {"DEV"}
 
       <!--<ErrorGeneration error="error msg" client:only="react" />-->
     </div>

@@ -1,4 +1,5 @@
 import { defineConfig } from "astro/config";
+import db from "@astrojs/db";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import icon from "astro-icon";
@@ -28,9 +29,9 @@ export default defineConfig({
     react({
       include: ["**/react/*"],
       experimentalReactChildren: true,
-    }),
-    // solidJs(),
+    }), // solidJs(),
     icon(),
+    db(),
   ],
 
   experimental: {
