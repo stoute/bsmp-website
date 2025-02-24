@@ -1,5 +1,5 @@
 import { v4 as uuid } from "uuid";
-import { PromptTemplateTable, type PromptTemplateModel } from "@db/models";
+// import { PromptTemplateTable, type PromptTemplateModel } from "@db/models";
 import { db, PromptTemplateTable } from "astro:db";
 
 // GET /api/prompts: Retrieves all prompt templates.

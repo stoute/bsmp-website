@@ -1,14 +1,17 @@
 import { v4 as uuid } from "uuid";
-import { PromptTemplateTable, type PromptTemplateModel } from "@db/models";
-import { db, PromptTemplateTable } from "astro:db";
+// import { PromptTemplateTable, type PromptTemplateModel } from "@db/models";
+import { PromptTemplateTable, db, eq, and } from "astro:db";
 
 // GET /api/prompts/[id]: Retrieves a specific prompt template by its id.
 export async function GET({ params }: { params: { id: string } }) {
   try {
-    console.log(params);
     const { id } = params;
-    const prompt = await db.select().from(PromptTemplateTable)
-      .where`${PromptTemplateTable.columns.id} = ${id}`.get();
+    const prompt = await db
+      .select()
+      .from(PromptTemplateTable)
+      .where(eq(PromptTemplateTable.id, id))
+      // .where(`${PromptTemplateTable.id} = ${id}`);
+      .get();
     if (!prompt) {
       return new Response(
         JSON.stringify({ message: "Prompt template not found" }),
