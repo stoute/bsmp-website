@@ -1,19 +1,5 @@
 import { defineCollection, z } from "astro:content";
 
-// Define the PromptTemplates collection for content management
-const promptTemplates = defineCollection({
-  schema: z.object({
-    id: z.string(),
-    name: z.string(),
-    description: z.string(),
-    systemPrompt: z.string(),
-    template: z.string(),
-    variables: z.array(z.string()), // Array of strings
-    created_at: z.string(),
-    updated_at: z.string(),
-  }),
-});
-
 const work = defineCollection({
   type: "content",
   schema: z.object({
@@ -56,8 +42,23 @@ const legal = defineCollection({
   }),
 });
 
+// Define the PromptTemplates collection for content management
+// const promptTemplates = defineCollection({
+//   type: "content",
+//   schema: z.object({
+//     id: z.string(),
+//     name: z.string(),
+//     description: z.string(),
+//     systemPrompt: z.string(),
+//     template: z.string(),
+//     variables: z.array(z.string()),
+//     created_at: z.date(),
+//     updated_at: z.date(),
+//   }),
+// });
+
 export const collections = {
-  promptTemplates,
+  // promptTemplates,
   work,
   blog,
   projects,

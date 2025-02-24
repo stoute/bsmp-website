@@ -1,6 +1,7 @@
 import { v4 as uuid } from "uuid";
 // import { PromptTemplateTable, type PromptTemplateModel } from "@db/models";
 import { PromptTemplateTable, db, eq, and } from "astro:db";
+import type { IPromptTemplate } from "@lib/prompt-template/PromptTemplate";
 
 // GET /api/prompts/[id]: Retrieves a specific prompt template by its id.
 export async function GET({ params }: { params: { id: string } }) {
@@ -72,7 +73,7 @@ export async function put({
     // Set updated_at to the current ISO datetime.
     const now = new Date().toISOString();
 
-    const updatedPrompt: Partial<PromptTemplateModel> = {
+    const updatedPrompt: Partial<IPromptTemplate> = {
       name,
       description,
       systemPrompt,
@@ -162,12 +163,13 @@ export async function del({ params }: { params: { id: string } }) {
 }
 
 export async function getStaticPaths() {
-  const posts = await db.select().from(PromptTemplateTable).all();
+  const posts = await db.select().from(PromptTemplateTable);
   let arr = [];
   posts.map((post) => {
     arr.push({ params: { id: post.id } });
   });
   return arr;
+  // todo: should work like this?
   // return {
   //   paths: arr,
   //   fallback: false,

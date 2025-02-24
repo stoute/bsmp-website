@@ -1,6 +1,6 @@
 import { v4 as uuid } from "uuid";
-// import { PromptTemplateTable, type PromptTemplateModel } from "@db/models";
 import { db, PromptTemplateTable } from "astro:db";
+import type { IPromptTemplate } from "@lib/prompt-template/PromptTemplate";
 
 // GET /api/prompts: Retrieves all prompt templates.
 export async function GET() {
@@ -27,8 +27,7 @@ export async function GET() {
   }
 }
 
-// POST /api/prompts: Creates a new prompt template.
-
+// POST /api/prompts: Creates a new prompt template. (server mode only)
 export async function POST({ request }: { request: Request }) {
   try {
     const requestBody = await request.json();
@@ -52,7 +51,7 @@ export async function POST({ request }: { request: Request }) {
     const id = uuid();
     const now = new Date().toISOString();
 
-    const newPrompt: PromptTemplateModel = {
+    const newPrompt: IPromptTemplate = {
       id,
       name,
       description,

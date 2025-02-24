@@ -1,7 +1,7 @@
 /**
  * This interface is generated from the JSON schema.
  */
-export interface PromptTemplate {
+export interface IPromptTemplate {
   id: string; // UUID format
   name: string;
   description: string;

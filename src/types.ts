@@ -32,14 +32,3 @@ export type Socials = {
   TEXT: string;
   HREF: string;
 }[];
-
-export interface PromptTemplateTable {
-  id: string; // UUID format
-  name: string;
-  description: string;
-  systemPrompt: string;
-  template: string;
-  variables: string[];
-  created_at: string; // ISO datetime format (e.g., 2024-01-27T10:00:00Z)
-  updated_at: string; // ISO datetime format (e.g., 2024-01-27T10:00:00Z)
-}
