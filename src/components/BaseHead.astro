@@ -55,6 +55,9 @@ const { title, description, image = "/open-graph.jpg" } = Astro.props;
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
+<!--Site trasisitons are enabled-->
+<ClientRouter />
+
 <!-- Sitemap -->
 <link rel="sitemap" href="/sitemap-index.xml" />
 
@@ -71,8 +74,6 @@ const { title, description, image = "/open-graph.jpg" } = Astro.props;
 <script is:inline src="/js/scroll.js"></script>
 <script is:inline src="/js/animate.js"></script>
 <script defer is:inline src="/js/copy.js"></script>
-
-<ClientRouter />
 
 <script>
   import type { TransitionBeforeSwapEvent } from "astro:transitions/client";

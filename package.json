@@ -49,6 +49,7 @@
     "solid-js": "^1.8.15",
     "tailwind-merge": "^2.2.2",
     "typescript": "^5.4.2",
+    "uuid": "^11.1.0",
     "vite": "^6.1.1"
   },
   "devDependencies": {

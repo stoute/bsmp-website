@@ -6,12 +6,15 @@ import BottomLayout from "@layouts/BottomLayout.astro";
 import AICardGeneration from "@components/kokonutui/ai-card-generation";
 import { ErrorGeneration } from "@components/kokonutui/error-generation";
 
-import { db, Comment, Author } from "astro:db";
+import { db, PromptTemplate, Comment, Author } from "astro:db";
 
 const comments = await db.select().from(Comment);
 const authors = await db.select().from(Author);
-console.log(comments);
-console.log(authors);
+const templates = await db.select().from(PromptTemplate);
+
+// const templates = await getCollection("promptTemplates");
+
+console.log(templates);
 ---
 
 <PageLayout title={"dev"} description={"dev"}>
