@@ -1,3 +1,5 @@
+export const prerender = false;
+
 import { v4 as uuid } from "uuid";
 // import { PromptTemplateTable, type PromptTemplateModel } from "@db/models";
 import { PromptTemplateTable, db, eq, and } from "astro:db";
@@ -46,7 +48,7 @@ export async function GET({ params }: { params: { id: string } }) {
 }
 
 // PUT /api/prompts/[id]: Updates an existing prompt template.
-export async function put({
+export async function PUT({
   request,
   params,
 }: {
@@ -124,7 +126,7 @@ export async function put({
 }
 
 // DELETE /api/prompts/[id]: Deletes a prompt template.
-export async function del({ params }: { params: { id: string } }) {
+export async function DELETE({ params }: { params: { id: string } }) {
   try {
     const { id } = params;
 

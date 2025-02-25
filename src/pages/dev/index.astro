@@ -1,26 +1,10 @@
 ---
 export const prerender = true;
 
-import { getCollection } from "astro:content";
 import PageLayout from "@layouts/PageLayout.astro";
 import TopLayout from "@layouts/TopLayout.astro";
 import BottomLayout from "@layouts/BottomLayout.astro";
-import AICardGeneration from "@components/kokonutui/ai-card-generation";
-import PromptTemplateEditor from "@components/PromptTemplateEditor";
-import PromptTemplateList from "@components/PromptTemplateList";
-import type { IPromptTemplate } from "@types";
-
-const initialPromptTemplate: IPromptTemplate = {
-  id: "one",
-  name: "Creative Writing Assistant",
-  description: "Helps generate creative writing pieces.",
-  systemPrompt:
-    "You are a creative writing assistant that provides imaginative suggestions.",
-  template: "Write a short story about {{character}} in a {{setting}}.",
-  variables: ["character", "setting"],
-  created_at: new Date().toISOString(),
-  updated_at: new Date().toISOString(),
-};
+import PromptTemplates from "../../components/prompt-templates/PromptTemplates";
 ---
 
 <script is:inline>
@@ -38,19 +22,6 @@ const initialPromptTemplate: IPromptTemplate = {
     </div>
   </TopLayout>
   <BottomLayout>
-    <div style="display: flex;">
-      <div style="width: 30%;">
-        <PromptTemplateList
-          client:visible
-          onSelect={() => console.log(initialPromptTemplate)}
-        />
-      </div>
-      <div style="width: 70%;">
-        <PromptTemplateEditor
-          promptTemplate={initialPromptTemplate}
-          client:visible
-        />
-      </div>
-    </div>
+    <PromptTemplates client:load initialTemplate={{}} />
   </BottomLayout>
 </PageLayout>

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Plus, RefreshCw, Search } from "lucide-react";
-import type { IPromptTemplate } from "@types";
+import type { IPromptTemplate } from "@types.ts";
 
-import { Button } from "@components/ui/button";
-import { Input } from "@components/ui/input";
+import { Button } from "@components/ui/button.tsx";
+import { Input } from "@components/ui/input.tsx";
 import {
   Card,
   CardContent,
@@ -11,9 +11,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@components/ui/card";
-import { ScrollArea } from "@components/ui/scroll-area";
-import { Separator } from "@components/ui/separator";
+} from "@components/ui/card.tsx";
+import { ScrollArea } from "@components/ui/scroll-area.tsx";
+import { Separator } from "@components/ui/separator.tsx";
 
 interface PromptTemplateListProps {
   onSelect: (promptTemplate: IPromptTemplate) => void;

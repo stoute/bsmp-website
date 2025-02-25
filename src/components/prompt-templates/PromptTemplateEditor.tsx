@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Trash2, Save, Plus, AlertCircle } from "lucide-react";
-import type { IPromptTemplate } from "@types";
+import type { IPromptTemplate } from "@types.ts";
 
 import {
   Form,
@@ -13,10 +13,10 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@components/ui/form";
-import { Input } from "@components/ui/input";
-import { Button } from "@components/ui/button";
-import { Textarea } from "@components/ui/textarea";
+} from "@components/ui/form.tsx";
+import { Input } from "@components/ui/input.tsx";
+import { Button } from "@components/ui/button.tsx";
+import { Textarea } from "@components/ui/textarea.tsx";
 import {
   Card,
   CardContent,
@@ -24,10 +24,10 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@components/ui/card";
-import { Alert, AlertDescription, AlertTitle } from "@components/ui/alert";
-import { Badge } from "@components/ui/badge";
-import { Separator } from "@components/ui/separator";
+} from "@components/ui/card.tsx";
+import { Alert, AlertDescription, AlertTitle } from "@components/ui/alert.tsx";
+import { Badge } from "@components/ui/badge.tsx";
+import { Separator } from "@components/ui/separator.tsx";
 
 // Define the form schema using zod
 const formSchema = z.object({
@@ -35,7 +35,7 @@ const formSchema = z.object({
   name: z.string().min(1, "Name is required"),
   description: z.string().min(1, "Description is required"),
   systemPrompt: z.string().min(1, "System prompt is required"),
-  template: z.string().min(1, "Template is required"),
+  template: z.string().optional(),
   variables: z.array(z.string()).min(1, "At least one variable is required"),
   created_at: z.string().optional(),
   updated_at: z.string().optional(),
