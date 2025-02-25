@@ -85,8 +85,11 @@ export async function PUT({
     };
 
     // Update the prompt template in the database.
-    const result = await db.update(PromptTemplateTable).set(updatedPrompt)
-      .where`${PromptTemplateTable.columns.id} = ${id}`.run();
+    const result = await db
+      .update(PromptTemplateTable)
+      .set(updatedPrompt)
+      .where(eq(PromptTemplateTable.id, id))
+      .run();
 
     if (result.changes === 0) {
       return new Response(
@@ -101,8 +104,11 @@ export async function PUT({
     }
 
     // Retrieve the updated prompt template from the database.
-    const updatedPromptTemplate = await db.select().from(PromptTemplateTable)
-      .where`${PromptTemplateTable.columns.id} = ${id}`.get();
+    const updatedPromptTemplate = await db
+      .select()
+      .from(PromptTemplateTable)
+      .where(eq(PromptTemplateTable.id, id))
+      .get();
 
     // Return a 200 status code upon successful update, including the updated prompt template in the response body.
     return new Response(JSON.stringify(updatedPromptTemplate), {
@@ -131,8 +137,10 @@ export async function DELETE({ params }: { params: { id: string } }) {
     const { id } = params;
 
     // Delete the prompt template from the database.
-    const result = await db.delete(PromptTemplateTable)
-      .where`${PromptTemplateTable.columns.id} = ${id}`.run();
+    const result = await db
+      .delete(PromptTemplateTable)
+      .where(eq(PromptTemplateTable.id, id))
+      .run();
 
     if (result.changes === 0) {
       return new Response(
