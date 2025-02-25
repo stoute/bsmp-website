@@ -282,6 +282,12 @@ export default {
         },
       },
     },
+    backgroundColor: {
+      background: "white",
+    },
+    textColor: {
+      foreground: "black",
+    }
   },
   plugins: [require("@tailwindcss/typography")],
 };

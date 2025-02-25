@@ -6,18 +6,24 @@ import PageLayout from "@layouts/PageLayout.astro";
 import TopLayout from "@layouts/TopLayout.astro";
 import BottomLayout from "@layouts/BottomLayout.astro";
 import AICardGeneration from "@components/kokonutui/ai-card-generation";
-import { db, PromptTemplateTable, Comment, Author } from "astro:db";
+import PromptTemplateEditor from "@components/PromptTemplateEditor";
+import PromptTemplateList from "@components/PromptTemplateList";
+import type { IPromptTemplate } from "@types";
 
-// const templates = await db.select().from(PromptTemplateTable).all();
-
-const promptTemplate = await fetch(Astro.url.origin + "/api/prompts/one.json")
-  .then((response) => response.json())
-  .catch((error) => console.error("Error:", error));
-console.log(promptTemplate);
+const initialPromptTemplate: IPromptTemplate = {
+  id: "one",
+  name: "Creative Writing Assistant",
+  description: "Helps generate creative writing pieces.",
+  systemPrompt:
+    "You are a creative writing assistant that provides imaginative suggestions.",
+  template: "Write a short story about {{character}} in a {{setting}}.",
+  variables: ["character", "setting"],
+  created_at: new Date().toISOString(),
+  updated_at: new Date().toISOString(),
+};
 ---
 
-<script>
-  // const url = window.location.origin + "/api/prompts/one.json";
+<script is:inline>
   const url = window.location.origin + "/api/hello";
   const result = await fetch(url)
     .then((response) => response.json())
@@ -26,18 +32,25 @@ console.log(promptTemplate);
 </script>
 
 <PageLayout title={"dev"} description={"dev"}>
-  <!--<div class="bg-subwayDark background-image ">-->
   <TopLayout>
     <div class="animate page-heading">
       {"DEV"}
-
-      <!--<ErrorGeneration error="error msg" client:only="react" />-->
     </div>
   </TopLayout>
   <BottomLayout>
-    <AICardGeneration client:only="react" />
-    <!--<div class="animate">-->
-    <!--  <Projects client:load tags={tags} data={projects} />-->
-    <!--</div>-->
+    <div style="display: flex;">
+      <div style="width: 30%;">
+        <PromptTemplateList
+          client:visible
+          onSelect={() => console.log(initialPromptTemplate)}
+        />
+      </div>
+      <div style="width: 70%;">
+        <PromptTemplateEditor
+          promptTemplate={initialPromptTemplate}
+          client:visible
+        />
+      </div>
+    </div>
   </BottomLayout>
 </PageLayout>
