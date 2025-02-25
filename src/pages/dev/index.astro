@@ -1,29 +1,29 @@
 ---
+export const prerender = true;
+
 import { getCollection } from "astro:content";
 import PageLayout from "@layouts/PageLayout.astro";
 import TopLayout from "@layouts/TopLayout.astro";
 import BottomLayout from "@layouts/BottomLayout.astro";
 import AICardGeneration from "@components/kokonutui/ai-card-generation";
-import { ErrorGeneration } from "@components/kokonutui/error-generation";
-
 import { db, PromptTemplateTable, Comment, Author } from "astro:db";
 
-// const comments = await db.select().from(Comment);
-// const authors = await db.select().from(Author);
 // const templates = await db.select().from(PromptTemplateTable).all();
-// const templates = await getCollection("promptTemplates");
 
-// console.log(templates);
-// fetch(Astro.url.origin + "/api/prompts/index.json")
-//   .then((response) => response.json())
-//   .then((data) => console.log("data"))
-//   .catch((error) => console.error("Error:", error));
-//
-fetch(Astro.url.origin + "/api/prompts/one.json")
+const promptTemplate = await fetch(Astro.url.origin + "/api/prompts/one.json")
   .then((response) => response.json())
-  .then((data) => console.log("data"))
   .catch((error) => console.error("Error:", error));
+console.log(promptTemplate);
 ---
+
+<script>
+  // const url = window.location.origin + "/api/prompts/one.json";
+  const url = window.location.origin + "/api/hello";
+  const result = await fetch(url)
+    .then((response) => response.json())
+    .catch((error) => console.error("Error:", error));
+  console.log(result);
+</script>
 
 <PageLayout title={"dev"} description={"dev"}>
   <!--<div class="bg-subwayDark background-image ">-->

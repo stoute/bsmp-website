@@ -20,7 +20,7 @@ export default defineConfig({
 
   // fixme: add node adapter firebase
   // adapter: node({
-  //   mode: "middleware"
+  //   mode: "middleware",
   // }),
   // adapter: vercel(),
   integrations: [

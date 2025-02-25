@@ -1,5 +1,7 @@
 
 @import 'tailwindcss';
+/*---break---*/
+@custom-variant dark (&:is(.dark *));
 
 @config '../../tailwind.config.mjs';
 
@@ -162,7 +164,6 @@ article img {
   @apply animate-twinkle; /* defined in tailwind.config */
 }
 
-
 /**
  * Meteors
  */
@@ -207,4 +208,15 @@ article img {
 
 .copy-svg {
   @apply w-full aspect-square text-white opacity-70 hover:opacity-90;
+}
+
+/*---break---*/
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
