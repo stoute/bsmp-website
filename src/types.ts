@@ -7,12 +7,6 @@ export interface Site extends Page {
   AUTHOR: string;
 }
 
-export type Link = {
-  TEXT: string;
-  HREF: string;
-  DISABLED?: string;
-};
-
 export type Links = {
   TEXT: string;
   HREF: string;
@@ -43,4 +37,3 @@ export interface IPromptTemplate {
   created_at: string; // ISO datetime format
   updated_at: string; // ISO datetime format
 }
-

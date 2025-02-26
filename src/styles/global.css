@@ -2,40 +2,28 @@
 @import 'tailwindcss';
 /*---break---*/
 @custom-variant dark (&:is(.dark *));
-
 @config '../../tailwind.config.mjs';
 
-/*@theme {*/
-/*  --*: initial;*/
-/*}*/
+@theme {
+  /*--*: initial;*/
+}
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
   looks the same as it did with Tailwind CSS v3.
-
   If we ever want to remove these styles, we need to add an explicit border
   color utility to any element that depends on these defaults.
 */
-@layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
-  }
-}
-
-@layer utilities {
-  * {
-    /*border: 1px inset rgba(255, 255, 255, 0.5);*/
-  }
-
-  :root {
-    --copy-btn-margin: 10px;
-  }
-}
+/*@layer base {*/
+/*  *,*/
+/*  ::after,*/
+/*  ::before,*/
+/*  ::backdrop,*/
+/*  ::file-selector-button {*/
+/*    border-color: var(--color-gray-200, currentColor);*/
+/*  }*/
+/*}*/
 
 @layer base {
   @font-face {
@@ -54,18 +42,26 @@
   }
 }
 
+@layer utilities {
+  * {
+    /*border: 1px inset rgba(255, 255, 255, 0.5);*/
+  }
+  :root {
+    --copy-btn-margin: 10px;
+  }
+}
+
 html {
   overflow-y: scroll;
   color-scheme: light;
   background-color: white;
   font-family: "Open Sans", sans-serif;
-  /*font-family: "Atkinson", sans-serif;*/
   scroll-behavior: smooth!important;
 }
 
 html.dark {
   color-scheme: dark;
-  background-color: black;
+  /*background-color: black;*/
 }
 
 html,
@@ -81,6 +77,9 @@ body {
 
 .background-image {
   @apply h-screen bg-cover bg-center bg-no-repeat overflow-y-scroll;
+}
+.page-heading {
+  @apply text-center;
 }
 
 main {
@@ -100,10 +99,6 @@ header.scrolled {
   @apply bg-white/75 dark:bg-black/50;
   @apply border-black/10 dark:border-white/25;
   @apply backdrop-blur-xs saturate-200;
-}
-
-.page-heading {
-  @apply text-center;
 }
 
 section {

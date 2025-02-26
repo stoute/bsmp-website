@@ -21,13 +21,12 @@ export function readingTime(html: string) {
   return `${readingTimeMinutes} min read`;
 }
 
-export function parseLinks(links: Links, environment: string): Links[] {
-  let arr: Links = [];
+export function parseLinks(links: Links[], environment: string): Links[] {
+  let arr: Links[] = [];
   links.map((link) => {
     if (environment === "production" && link["DISABLED"] === "production") {
       return;
     } else {
-      // @ts-ignore
       arr.push(link);
     }
   });

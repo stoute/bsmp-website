@@ -55,7 +55,7 @@ const { title, description, image = "/open-graph.jpg" } = Astro.props;
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
-<!--Site trasisitons are enabled-->
+<!--Site transitions are enabled-->
 <ClientRouter />
 
 <!-- Sitemap -->
@@ -68,6 +68,11 @@ const { title, description, image = "/open-graph.jpg" } = Astro.props;
   title={title}
   href={`${Astro.site}rss.xml`}
 />
+
+<!-- bsmp webcomponents-->
+<script
+  type="module"
+  src="/node_modules/@bsmp/webcomponents/dist/bsm/bsm.esm.js"></script>
 
 <!-- Global Scripts -->
 <script is:inline src="/js/theme.js"></script>

@@ -126,7 +126,6 @@ const PromptTemplateList: React.FC<PromptTemplateListProps> = ({
           </div>
         </ScrollArea>
       </CardContent>
-     
     </Card>
   );
 };
