@@ -4,8 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 export default async function () {
   const promptTemplates = [
     {
-      id: "one",
-      // id: uuidv4(),
+      id: uuidv4(),
       name: "Creative Writing Assistant",
       description: "Helps generate creative writing pieces.",
       systemPrompt:

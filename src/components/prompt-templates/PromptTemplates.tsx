@@ -44,14 +44,15 @@ const PromptTemplates: React.FC<PromptTemplatesProps> = ({
     console.log("Saving template:", template);
     setSelectedTemplate(template);
     setSelectedId(template.id);
-    // Refresh the list after saving
+    // todo: Refresh the list after saving
   };
 
   // Handle deleting a template
   const handleDeleteTemplate = (id: string) => {
     setSelectedTemplate(undefined);
+    // todo: setSelectedTemplate({});
     setSelectedId(undefined);
-    // Refresh the list after deleting
+    // todo: Refresh the list after deleting
   };
 
   return (

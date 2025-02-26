@@ -88,6 +88,10 @@ const PromptTemplateList: React.FC<PromptTemplateListProps> = ({
             <RefreshCw className={`h-4 w-4 ${loading ? "animate-spin" : ""}`} />
           </Button>
         </div>
+        <Button onClick={onNew} className="w-full">
+          <Plus className="mr-2 h-4 w-4" />
+          Create New Template
+        </Button>
 
         {error && <p className="text-destructive text-sm">{error}</p>}
 
@@ -122,12 +126,7 @@ const PromptTemplateList: React.FC<PromptTemplateListProps> = ({
           </div>
         </ScrollArea>
       </CardContent>
-      <CardFooter>
-        <Button onClick={onNew} className="w-full">
-          <Plus className="mr-2 h-4 w-4" />
-          Create New Template
-        </Button>
-      </CardFooter>
+     
     </Card>
   );
 };

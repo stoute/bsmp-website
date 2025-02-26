@@ -248,10 +248,7 @@ const PromptTemplateEditor: React.FC<PromptTemplateEditorProps> = ({
                   <FormItem>
                     <FormLabel>Name</FormLabel>
                     <FormControl>
-                      <Input
-                        placeholder="Creative Writing Assistant"
-                        {...field}
-                      />
+                      <Input placeholder="" {...field} />
                     </FormControl>
                     <FormDescription>
                       A descriptive name for this prompt template
@@ -289,13 +286,13 @@ const PromptTemplateEditor: React.FC<PromptTemplateEditorProps> = ({
                   <FormLabel>Description</FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder="Helps generate creative writing pieces."
+                      placeholder=""
                       className="resize-none"
                       {...field}
                     />
                   </FormControl>
                   <FormDescription>
-                    A brief explanation of what this prompt template does
+                    A brief explanation of what this template does
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -310,13 +307,13 @@ const PromptTemplateEditor: React.FC<PromptTemplateEditorProps> = ({
                   <FormLabel>System Prompt</FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder="You are a creative writing assistant that provides imaginative suggestions."
+                      placeholder=""
                       className="min-h-[100px] resize-none"
                       {...field}
                     />
                   </FormControl>
                   <FormDescription>
-                    The system prompt that defines the AI's role and behavior
+                    The system instructions for the AI model
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -349,12 +346,12 @@ const PromptTemplateEditor: React.FC<PromptTemplateEditorProps> = ({
               <FormLabel>Variables</FormLabel>
               <div className="mt-2 mb-4 flex flex-wrap gap-2">
                 {form.watch("variables")?.map((variable) => (
-                  <Badge key={variable} className="flex items-center gap-1">
+                  <Badge key={variable} variant="secondary">
                     {variable}
                     <button
                       type="button"
+                      className="text-muted-foreground hover:text-foreground ml-1"
                       onClick={() => removeVariable(variable)}
-                      className="ml-1 text-xs hover:text-red-500"
                     >
                       ×
                     </button>
@@ -363,7 +360,7 @@ const PromptTemplateEditor: React.FC<PromptTemplateEditorProps> = ({
               </div>
               <div className="flex gap-2">
                 <Input
-                  placeholder="Add a variable (e.g. character)"
+                  placeholder="variable_name"
                   value={variableInput}
                   onChange={(e) => setVariableInput(e.target.value)}
                   onKeyDown={(e) => {
@@ -373,8 +370,14 @@ const PromptTemplateEditor: React.FC<PromptTemplateEditorProps> = ({
                     }
                   }}
                 />
-                <Button type="button" onClick={addVariable} size="sm">
-                  <Plus className="h-4 w-4" />
+                <Button
+                  type="button"
+                  variant="outline"
+                  onClick={addVariable}
+                  disabled={!variableInput.trim()}
+                >
+                  <Plus className="mr-2 h-4 w-4" />
+                  Add
                 </Button>
               </div>
               {form.formState.errors.variables && (
@@ -384,56 +387,40 @@ const PromptTemplateEditor: React.FC<PromptTemplateEditorProps> = ({
               )}
             </div>
 
-            {!isNew && (
-              <div className="text-sm text-gray-500">
-                <p>
-                  Created:{" "}
-                  {new Date(promptTemplate?.created_at || "").toLocaleString()}
-                </p>
-                <p>
-                  Last Updated:{" "}
-                  {new Date(promptTemplate?.updated_at || "").toLocaleString()}
-                </p>
+            <Separator />
+
+            <div className="flex justify-between">
+              {!isNew && onDelete && (
+                <Button
+                  type="button"
+                  variant="destructive"
+                  onClick={handleDelete}
+                  disabled={loading}
+                >
+                  <Trash2 className="mr-2 h-4 w-4" />
+                  Delete
+                </Button>
+              )}
+              <div className="ml-auto flex gap-2">
+                {onCancel && (
+                  <Button
+                    type="button"
+                    variant="outline"
+                    onClick={onCancel}
+                    disabled={loading}
+                  >
+                    Cancel
+                  </Button>
+                )}
+                <Button type="submit" disabled={loading}>
+                  <Save className="mr-2 h-4 w-4" />
+                  {isNew ? "Create" : "Update"}
+                </Button>
               </div>
-            )}
+            </div>
           </form>
         </Form>
       </CardContent>
-      <CardFooter className="flex justify-between">
-        <div>
-          {!isNew && (
-            <Button
-              variant="destructive"
-              onClick={handleDelete}
-              disabled={loading}
-              type="button"
-            >
-              <Trash2 className="mr-2 h-4 w-4" />
-              Delete
-            </Button>
-          )}
-        </div>
-        <div className="flex gap-2">
-          {onCancel && (
-            <Button
-              variant="outline"
-              onClick={onCancel}
-              disabled={loading}
-              type="button"
-            >
-              Cancel
-            </Button>
-          )}
-          <Button
-            onClick={form.handleSubmit(onSubmit)}
-            disabled={loading}
-            type="submit"
-          >
-            <Save className="mr-2 h-4 w-4" />
-            {loading ? "Saving..." : "Save"}
-          </Button>
-        </div>
-      </CardFooter>
     </Card>
   );
 };
