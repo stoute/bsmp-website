@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PromptTemplate",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "A unique identifier for the PromptTemplate."
+    },
+    "name": {
+      "type": "string",
+      "description": "A descriptive name for the PromptTemplate."
+    },
+    "description": {
+      "type": "string",
+      "description": "A brief explanation of the PromptTemplate's purpose."
+    },
+    "systemPrompt": {
+      "type": "string",
+      "description": "The system prompt component of the PromptTemplate."
+    },
+    "template": {
+      "type": "string",
+      "description": "Complete Jinja2 template string."
+    },
+    "variables": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "An array of variable names expected as input."
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Datetime of record creation."
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Datetime of last record update."
+    }
+  },
+  "required": ["id", "name", "template", "variables", "created_at", "updated_at"]
+}
