@@ -36,7 +36,8 @@ const formSchema = z.object({
   description: z.string().min(1, "Description is required"),
   systemPrompt: z.string().min(1, "System prompt is required"),
   template: z.string().optional(),
-  variables: z.array(z.string()).min(1, "At least one variable is required"),
+  variables: z.array(z.string()),
+  // variables: z.array(z.string()).min(1, "At least one variable is required"),
   created_at: z.string().optional(),
   updated_at: z.string().optional(),
 });
