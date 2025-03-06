@@ -59,8 +59,8 @@ export default function Projects({ data, tags }: Props) {
             SHOWING {projects().length} OF {data.length} PROJECTS
           </div>
           <ul class="flex flex-col gap-3">
-            {projects().map((project) => (
-              <li>
+            {projects().map((project, i) => (
+              <li key={i}>
                 <ArrowCard entry={project} />
               </li>
             ))}

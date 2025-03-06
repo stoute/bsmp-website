@@ -1,89 +1,115 @@
-![Astro Sphere Lighthouse Score](_astrosphere.jpg)
+# Bob Stoute - Personal Website
 
-Astro Sphere is a static, minimalist, lightweight, lightning fast portfolio and blog theme based on my personal website.
+A modern, performant personal website and portfolio built with Astro, featuring a blog, project showcase, and work history. The site achieves perfect Lighthouse scores while maintaining a lightweight footprint (under 100kb per page including fonts).
 
-It is Astro, Tailwind and Typescript, with a very small amount of SolidJS for stateful components.
+## 🚀 Tech Stack
 
-## 🚀 Deploy your own
+- **Framework**: [Astro](https://astro.build)
+- **Styling**: Tailwind CSS
+- **Languages**: TypeScript, JavaScript
+- **Components**: SolidJS (for interactive elements)
+- **Content**: MDX/Markdown
+- **Deployment**: Firebase supported
 
-[![Deploy with Vercel](_deploy_vercel.svg)](https://vercel.com/new/clone?repository-url=https://github.com/markhorn-dev/astro-sphere)  [![Deploy with Netlify](_deploy_netlify.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/markhorn-dev/astro-sphere)
+## ✨ Features
 
-## 📋 Features
+- **Performance**
+  - 100/100 Lighthouse scores
+  - Pages under 100kb (including fonts)
+  - ~40ms render time on localhost
+  - Static Site Generation (SSG)
 
-- ✅ 100/100 Lighthouse performance
-- ✅ Responsive
-- ✅ Accessible
-- ✅ SEO-friendly
-- ✅ Typesafe
-- ✅ Minimal style
-- ✅ Light/Dark Theme
-- ✅ Animated UI
-- ✅ Tailwind styling
-- ✅ Auto generated sitemap
-- ✅ Auto generated RSS Feed
-- ✅ Markdown support
-- ✅ MDX Support (components in your markdown)
-- ✅ Searchable content (posts and projects)
-- ✅ Code Blocks - copy to clipboard
+- **Content Management**
+  - Blog posts with MDX support
+  - Project portfolio
+  - Work history
+  - Type-safe content schemas using Zod
 
-## 💯 Lighthouse score
-![Astro Sphere Lighthouse Score](_lighthouse.png)
+- **Developer Experience**
+  - TypeScript support
+  - ESLint integration
+  - Network development mode
+  - Hot module reloading
 
-## 🕊️ Lightweight
-All pages under 100kb (including fonts)
+- **User Experience**
+  - Responsive design
+  - Light/Dark theme
+  - Animated UI elements
+  - Accessible
+  - SEO optimized
+  - Auto-generated sitemap
+  - RSS feed
+  - Search functionality
+  - Code block copying
 
-## ⚡︎ Fast
-Rendered in ~40ms on localhost
+## 🛠️ Getting Started
 
-## 📄 Configuration
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+   For network access:
+   ```bash
+   npm run dev:network
+   ```
 
-The blog posts on the demo serve as the documentation and configuration.
+## 📝 Available Scripts
 
-## 💻 Commands
+- `npm run dev` - Start development server
+- `npm run dev:network` - Start development server with network access
+- `npm run build` - Build production site
+- `npm run preview` - Preview production build
+- `npm run preview:network` - Preview with network access
+- `npm run deploy-firebase` - Deploy to Firebase
+- `npm run deploy-vercel` - Deploy to Vercel
+- `npm run lint` - Run ESLint
+- `npm run lint:fix` - Auto-fix ESLint issues
 
-All commands are run from the root of the project, from a terminal:
+## 📁 Project Structure
 
-Replace npm with your package manager of choice. `npm`, `pnpm`, `yarn`, `bun`, etc
+```
+/
+├── public/           # Static assets
+├── src/
+│   ├── components/   # Astro/SolidJS components
+│   ├── content/      # Content collections
+│   │   ├── blog/    # Blog posts
+│   │   ├── projects/# Project showcases
+│   │   ├── work/    # Work history
+│   │   └── legal/   # Legal documents
+│   ├── layouts/     # Page layouts
+│   ├── pages/       # Route components
+│   ├── styles/      # Global styles
+│   └── lib/         # Utility functions
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run dev:network`     | Starts dev server on local network               |
-| `npm run sync`            | Generates TypeScript types for all Astro modules.|
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run preview:network` | Starts preview server on local network           |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-| `npm run lint`            | Run ESLint                                       |
-| `npm run lint:fix`        | Auto-fix ESLint issues                           |
+## 📚 Content Management
 
-## 🗺️ Roadmap
+Content is managed through Astro's content collections, with strict typing via Zod schemas:
 
-A few features I plan to implement
-- ⬜ Article Pages - Table of Contents
-- ⬜ Article Pages - Share on social media
+- **Blog Posts**: Articles with title, summary, date, and tags
+- **Projects**: Portfolio items with optional demo/repo links
+- **Work History**: Professional experience entries
+- **Legal**: Terms, privacy policy, etc.
 
-## ✨ Acknowledgement
+## 🚀 Deployment
 
-Theme inspired by [Paco Coursey](https://paco.me/), [Lee Robinson](https://leerob.io/) and [Hayden Bleasel](https://www.haydenbleasel.com/)
+The site supports multiple deployment platforms:
 
+- **Firebase**: `npm run deploy-firebase`
+- **Vercel**: `npm run deploy-vercel`
 
-## 🏛️ License
+## 📄 License
 
-MIT
+MIT License
 
+## 🔗 Links
 
-# 1.0.1 Update
-
-Added ability to run dev and preview on local network.
-added npm run dev:network
-added npm run preview:network
-
-Added slightly more particle density in both light and dark mode.
-
-Added subtle dark mode star and meteor animations.
-
-Removed eslint config
+- Live Site: [bob-stoute.firebaseapp.com](https://bob-stoute.firebaseapp.com)
+- GitHub: [github.com/stoute/webcomponents](https://github.com/stoute/webcomponents)
 
